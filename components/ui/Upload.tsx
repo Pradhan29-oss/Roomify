@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useOutletContext } from "react-router";
 import { CheckCircle2, ImageIcon, UploadIcon } from "lucide-react";
 import { PROGRESS_STEP, PROGRESS_INTERVAL_MS, REDIRECT_DELAY_MS } from "../../lib/constants";
@@ -11,25 +11,49 @@ const Upload = ({ onComplete }: UploadProps) => {
     const [file, setFile] = useState<File | null>(null);
     const [isDragging, setIsDragging] = useState(false);
     const [progress, setProgress] = useState(0)
+    const [error, setError] = useState<string | null>(null)
 
     const { isSignedIn } = useOutletContext<AuthContext>();
+
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
+    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    useEffect(() => {
+        return () => {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+            }
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+        };
+    }, []);
 
     const processFile = (selectedFile: File) => {
         if (!isSignedIn) return;
         setFile(selectedFile);
         setProgress(0);
 
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+
         const reader = new FileReader();
         reader.onload = (e) => {
             const base64 = e.target?.result as string;
 
             let currentProgress = 0;
-            const interval = setInterval(() => {
+            intervalRef.current = setInterval(() => {
                 currentProgress += PROGRESS_STEP;
                 if (currentProgress >= 100) {
                     setProgress(100);
-                    clearInterval(interval);
-                    setTimeout(() => {
+                    if (intervalRef.current) {
+                        clearInterval(intervalRef.current);
+                    }
+                    timeoutRef.current = setTimeout(() => {
                         onComplete?.(base64);
                     }, REDIRECT_DELAY_MS);
                 } else {
@@ -59,14 +83,44 @@ const Upload = ({ onComplete }: UploadProps) => {
 
         const droppedFiles = e.dataTransfer.files;
         if (droppedFiles && droppedFiles.length > 0) {
-            processFile(droppedFiles[0]);
+            const file = droppedFiles[0];
+
+            // Validate file type
+            if (file.type !== 'image/jpeg' && file.type !== 'image/png') {
+                setError('Only JPG and PNG files are allowed');
+                return;
+            }
+
+            // Validate file size (10MB max)
+            if (file.size > 10 * 1024 * 1024) {
+                setError('File size must not exceed 10MB');
+                return;
+            }
+
+            setError(null);
+            processFile(file);
         }
     };
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const selectedFiles = e.target.files;
         if (selectedFiles && selectedFiles.length > 0) {
-            processFile(selectedFiles[0]);
+            const file = selectedFiles[0];
+
+            // Validate file type
+            if (file.type !== 'image/jpeg' && file.type !== 'image/png') {
+                setError('Only JPG and PNG files are allowed');
+                return;
+            }
+
+            // Validate file size (10MB max)
+            if (file.size > 10 * 1024 * 1024) {
+                setError('File size must not exceed 10MB');
+                return;
+            }
+
+            setError(null);
+            processFile(file);
         }
     };
 
@@ -118,6 +172,12 @@ const Upload = ({ onComplete }: UploadProps) => {
                                 <p>Please sign in to upload</p>
                             )}
                         </div>
+
+                        {error && (
+                            <div className="error-message" style={{ color: 'red', marginTop: '10px' }}>
+                                {error}
+                            </div>
+                        )}
                     </div>
                 </div>
             )}

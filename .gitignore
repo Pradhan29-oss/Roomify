@@ -5,6 +5,10 @@
 # React Router
 /.react-router/
 /build/
+<<<<<<< HEAD
 
 # IDE
 .idea/
+=======
+.idea/workspace.xml
+>>>>>>> b4887eb (implement coderabbit suggested fixes)

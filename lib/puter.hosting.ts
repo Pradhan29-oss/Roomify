@@ -7,6 +7,8 @@ import {
     HOSTING_CONFIG_KEY, imageUrlToPngBlob,
     isHostedUrl
 } from "./utils";
+import * as url from "node:url";
+import {blob} from "node:stream/consumers";
 
 type HostingConfig = { subdomain: string }
 type HostedAsset = { url: string }
@@ -50,11 +52,7 @@ export const uploadImageToHosting = async ({ hosting, url, projectId, label }: S
 
          const contentType = resolved.contentType || resolved.blob.type || '';
          const ext = getImageExtension(contentType, url);
-
-         // Sanitize projectId to prevent path traversal
-         const sanitizedProjectId = projectId.replace(/[^a-zA-Z0-9_-]/g, '_');
-
-         const dir = `projects/${sanitizedProjectId}`;
+         const dir = `projects/${projectId}`;
          const filePath = `${dir}/${label}.${ext}`;
 
          const uploadFile = new File([resolved.blob], `${label}.${ext}`,{

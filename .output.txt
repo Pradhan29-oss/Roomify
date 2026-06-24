@@ -1,0 +1,1921 @@
+Command finished with exit code 0.
+Command output:
+
+lib\constants.ts:1:export const PUTER_WORKER_URL = import.meta.env.VITE_PUTER_WORKER_URL || "";
+lib\puter.action.ts:63:        //Call the Puter worker to store project in KV
+node_modules\@heyputer\puter.js\types\modules\util.d.ts:4:    getHydrator (config: { target: Window | Worker | 
+MessagePort }): { hydrate(value: unknown): unknown };
+node_modules\@heyputer\puter.js\types\modules\util.d.ts:6:    send (target: Window | Worker | MessagePort, id: string, 
+...args: unknown[]): void;
+node_modules\@heyputer\puter.js\types\modules\workers.d.ts:1:export interface WorkerInfo {
+node_modules\@heyputer\puter.js\types\modules\workers.d.ts:9:export interface WorkerDeployment {
+node_modules\@heyputer\puter.js\types\modules\workers.d.ts:15:export class WorkersHandler {
+node_modules\@heyputer\puter.js\types\modules\workers.d.ts:16:    create (workerName: string, filePath: string, 
+appName?: string): Promise<WorkerDeployment>;
+node_modules\@heyputer\puter.js\types\modules\workers.d.ts:17:    delete (workerName: string): Promise<boolean>;
+node_modules\@heyputer\puter.js\types\modules\workers.d.ts:19:    get (workerName: string): Promise<WorkerInfo | 
+undefined>;
+node_modules\@heyputer\puter.js\types\modules\workers.d.ts:20:    list (): Promise<WorkerInfo[]>;
+node_modules\@heyputer\puter.js\types\modules\workers.d.ts:21:    getLoggingHandle (workerName: string): 
+Promise<EventTarget & {
+node_modules\@heyputer\puter.js\types\puter.d.ts:16:import type { WorkersHandler } from './modules/workers.d.ts';
+node_modules\@heyputer\puter.js\types\puter.d.ts:69:    workers: WorkersHandler;
+node_modules\@heyputer\puter.js\types\shared.d.ts:1:export type PuterEnvironment = 'app' | 'gui' | 'web' | 
+'web-worker' | 'service-worker' | 'nodejs';
+node_modules\@heyputer\puter.js\index.d.ts:17:import type { WorkerDeployment, WorkerInfo, WorkersHandler } from 
+'./types/modules/workers.d.ts';
+node_modules\@heyputer\puter.js\index.d.ts:110:    WorkerDeployment,
+node_modules\@heyputer\puter.js\index.d.ts:111:    WorkerInfo,
+node_modules\@heyputer\puter.js\index.d.ts:112:    WorkersHandler,
+node_modules\@heyputer\puter.js\index.d.ts:117:// NOTE: Provider-specific response bodies (AI, drivers, workers 
+logging stream) intentionally
+node_modules\@react-router\dev\dist\vite\cloudflare.d.ts:15: * Vite plugin that provides [Node proxies to local workerd
+node_modules\@react-router\dev\dist\vite\cloudflare.d.ts:16: * 
+bindings](https://developers.cloudflare.com/workers/wrangler/api/#getplatformproxy)
+node_modules\@types\node\dns\promises.d.ts:383:     * When using [worker 
+threads](https://nodejs.org/docs/latest-v20.x/api/worker_threads.html), [`dnsPromises.setDefaultResultOrder()`](https:/
+/nodejs.org/docs/latest-v20.x/api/dns.html#dnspromisessetdefaultresultorderorder)
+node_modules\@types\node\dns\promises.d.ts:384:     * from the main thread won't affect the default dns orders in 
+workers.
+node_modules\@types\node\ts5.6\index.d.ts:96:/// <reference path="../worker_threads.d.ts" />
+node_modules\@types\node\web-globals\navigator.d.ts:3:// lib.webworker has `WorkerNavigator` rather than `Navigator`, 
+so conditionals use `onabort` instead of `onmessage`
+node_modules\@types\node\web-globals\navigator.d.ts:20:    // Needs conditional inference for lib.dom and 
+lib.webworker compatibility
+node_modules\@types\node\web-globals\storage.d.ts:3:// These interfaces are absent from lib.webworker, so the 
+conditionals use `onabort` rather than `onmessage`
+node_modules\@types\node\async_hooks.d.ts:581:        const WORKER: number;
+node_modules\@types\node\async_hooks.d.ts:582:        const WORKERHEAPSNAPSHOT: number;
+node_modules\@types\node\buffer.d.ts:1:// If lib.dom.d.ts or lib.webworker.d.ts is loaded, then use the global types.
+node_modules\@types\node\buffer.d.ts:147:     * multiple worker threads.
+node_modules\@types\node\cluster.d.ts:4: * is not needed, use the 
+[`worker_threads`](https://nodejs.org/docs/latest-v22.x/api/worker_threads.html)
+node_modules\@types\node\cluster.d.ts:21: *   // Fork workers.
+node_modules\@types\node\cluster.d.ts:26: *   cluster.on('exit', (worker, code, signal) => {
+node_modules\@types\node\cluster.d.ts:27: *     console.log(`worker ${worker.process.pid} died`);
+node_modules\@types\node\cluster.d.ts:30: *   // Workers can share any TCP connection
+node_modules\@types\node\cluster.d.ts:37: *   console.log(`Worker ${process.pid} started`);
+node_modules\@types\node\cluster.d.ts:41: * Running Node.js will now share port 8000 between the workers:
+node_modules\@types\node\cluster.d.ts:46: * Worker 4324 started
+node_modules\@types\node\cluster.d.ts:47: * Worker 4520 started
+node_modules\@types\node\cluster.d.ts:48: * Worker 6056 started
+node_modules\@types\node\cluster.d.ts:49: * Worker 5644 started
+node_modules\@types\node\cluster.d.ts:52: * On Windows, it is not yet possible to set up a named pipe server in a 
+worker.
+node_modules\@types\node\cluster.d.ts:67:         * File path to worker file.
+node_modules\@types\node\cluster.d.ts:72:         * String arguments passed to worker.
+node_modules\@types\node\cluster.d.ts:96:         * Sets inspector port of worker. This can be a number, or a function 
+that takes no arguments and returns a number.
+node_modules\@types\node\cluster.d.ts:97:         * By default each worker gets its own port, incremented from the 
+primary's `process.debugPort`.
+node_modules\@types\node\cluster.d.ts:107:         * Current working directory of the worker process.
+node_modules\@types\node\cluster.d.ts:131:     * A `Worker` object contains all public information and method about a 
+worker.
+node_modules\@types\node\cluster.d.ts:132:     * In the primary it can be obtained using `cluster.workers`. In a worker
+node_modules\@types\node\cluster.d.ts:133:     * it can be obtained using `cluster.worker`.
+node_modules\@types\node\cluster.d.ts:136:    export class Worker extends EventEmitter {
+node_modules\@types\node\cluster.d.ts:138:         * Each new worker is given its own unique id, this id is stored in 
+the `id`.
+node_modules\@types\node\cluster.d.ts:140:         * While a worker is alive, this is the key that indexes it in 
+`cluster.workers`.
+node_modules\@types\node\cluster.d.ts:145:         * All workers are created using [`child_process.fork()`](https://nod
+ejs.org/docs/latest-v22.x/api/child_process.html#child_processforkmodulepath-args-options), the returned object
+node_modules\@types\node\cluster.d.ts:146:         * from this function is stored as `.process`. In a worker, the 
+global `process` is stored.
+node_modules\@types\node\cluster.d.ts:150:         * Workers will call `process.exit(0)` if the `'disconnect'` event 
+occurs
+node_modules\@types\node\cluster.d.ts:157:         * Send a message to a worker or primary, optionally with a handle.
+node_modules\@types\node\cluster.d.ts:159:         * In the primary, this sends a message to a specific worker. It is 
+identical to [`ChildProcess.send()`](https://nodejs.org/docs/latest-v22.x/api/child_process.html#subprocesssendmessage-
+sendhandle-options-callback).
+node_modules\@types\node\cluster.d.ts:161:         * In a worker, this sends a message to the primary. It is identical 
+to `process.send()`.
+node_modules\@types\node\cluster.d.ts:167:         *   const worker = cluster.fork();
+node_modules\@types\node\cluster.d.ts:168:         *   worker.send('hi there');
+node_modules\@types\node\cluster.d.ts:170:         * } else if (cluster.isWorker) {
+node_modules\@types\node\cluster.d.ts:192:         * This function will kill the worker. In the primary worker, it 
+does this by
+node_modules\@types\node\cluster.d.ts:193:         * disconnecting the `worker.process`, and once disconnected, 
+killing with `signal`. In the worker, it does it by killing the process with `signal`.
+node_modules\@types\node\cluster.d.ts:195:         * The `kill()` function kills the worker process without waiting 
+for a graceful
+node_modules\@types\node\cluster.d.ts:196:         * disconnect, it has the same behavior as `worker.process.kill()`.
+node_modules\@types\node\cluster.d.ts:198:         * This method is aliased as `worker.destroy()` for backwards 
+compatibility.
+node_modules\@types\node\cluster.d.ts:200:         * In a worker, `process.kill()` exists, but it is not this function;
+node_modules\@types\node\cluster.d.ts:203:         * @param [signal='SIGTERM'] Name of the kill signal to send to the 
+worker process.
+node_modules\@types\node\cluster.d.ts:208:         * In a worker, this function will close all servers, wait for the 
+`'close'` event
+node_modules\@types\node\cluster.d.ts:211:         * In the primary, an internal message is sent to the worker causing 
+it to call `.disconnect()` on itself.
+node_modules\@types\node\cluster.d.ts:216:         * but connections may be accepted by any other listening worker. 
+Existing
+node_modules\@types\node\cluster.d.ts:218:         * see `server.close()`, the IPC channel to the worker will close 
+allowing it
+node_modules\@types\node\cluster.d.ts:222:         * automatically closed by workers, and disconnect does not wait for 
+them to close
+node_modules\@types\node\cluster.d.ts:225:         * In a worker, `process.disconnect` exists, but it is not this 
+function;
+node_modules\@types\node\cluster.d.ts:228:         * Because long living server connections may block workers from 
+disconnecting, it
+node_modules\@types\node\cluster.d.ts:230:         * close them. It also may be useful to implement a timeout, killing 
+a worker if
+node_modules\@types\node\cluster.d.ts:237:         *   const worker = cluster.fork();
+node_modules\@types\node\cluster.d.ts:240:         *   worker.on('listening', (address) => {
+node_modules\@types\node\cluster.d.ts:241:         *     worker.send('shutdown');
+node_modules\@types\node\cluster.d.ts:242:         *     worker.disconnect();
+node_modules\@types\node\cluster.d.ts:244:         *       worker.kill();
+node_modules\@types\node\cluster.d.ts:248:         *   worker.on('disconnect', () => {
+node_modules\@types\node\cluster.d.ts:252:         * } else if (cluster.isWorker) {
+node_modules\@types\node\cluster.d.ts:267:         * @return A reference to `worker`.
+node_modules\@types\node\cluster.d.ts:271:         * This function returns `true` if the worker is connected to its 
+primary via its
+node_modules\@types\node\cluster.d.ts:272:         * IPC channel, `false` otherwise. A worker is connected to its 
+primary after it
+node_modules\@types\node\cluster.d.ts:278:         * This function returns `true` if the worker's process has 
+terminated (either
+node_modules\@types\node\cluster.d.ts:292:         *   // Fork workers.
+node_modules\@types\node\cluster.d.ts:297:         *   cluster.on('fork', (worker) => {
+node_modules\@types\node\cluster.d.ts:298:         *     console.log('worker is dead:', worker.isDead());
+node_modules\@types\node\cluster.d.ts:301:         *   cluster.on('exit', (worker, code, signal) => {
+node_modules\@types\node\cluster.d.ts:302:         *     console.log('worker is dead:', worker.isDead());
+node_modules\@types\node\cluster.d.ts:305:         *   // Workers can share any TCP connection. In this case, it is an 
+HTTP server.
+node_modules\@types\node\cluster.d.ts:317:         * This property is `true` if the worker exited due to 
+`.disconnect()`.
+node_modules\@types\node\cluster.d.ts:318:         * If the worker exited any other way, it is `false`. If the
+node_modules\@types\node\cluster.d.ts:319:         * worker has not exited, it is `undefined`.
+node_modules\@types\node\cluster.d.ts:321:         * The boolean `worker.exitedAfterDisconnect` allows distinguishing 
+between
+node_modules\@types\node\cluster.d.ts:322:         * voluntary and accidental exit, the primary may choose not to 
+respawn a worker
+node_modules\@types\node\cluster.d.ts:326:         * cluster.on('exit', (worker, code, signal) => {
+node_modules\@types\node\cluster.d.ts:327:         *   if (worker.exitedAfterDisconnect === true) {
+node_modules\@types\node\cluster.d.ts:332:         * // kill worker
+node_modules\@types\node\cluster.d.ts:333:         * worker.kill();
+node_modules\@types\node\cluster.d.ts:393:         * Spawn a new worker process.
+node_modules\@types\node\cluster.d.ts:396:         * @param env Key/value pairs to add to worker process environment.
+node_modules\@types\node\cluster.d.ts:399:        fork(env?: any): Worker;
+node_modules\@types\node\cluster.d.ts:412:        readonly isWorker: boolean;
+node_modules\@types\node\cluster.d.ts:415:         * global setting and effectively frozen once either the first 
+worker is spawned, or 
+[`.setupPrimary()`](https://nodejs.org/docs/latest-v22.x/api/cluster.html#clustersetupprimarysettings)
+node_modules\@types\node\cluster.d.ts:440:         * and have no effect on workers that are already running.
+node_modules\@types\node\cluster.d.ts:442:         * The only attribute of a worker that cannot be set via 
+`.setupPrimary()` is the `env` passed to
+node_modules\@types\node\cluster.d.ts:452:         *   exec: 'worker.js',
+node_modules\@types\node\cluster.d.ts:456:         * cluster.fork(); // https worker
+node_modules\@types\node\cluster.d.ts:458:         *   exec: 'worker.js',
+node_modules\@types\node\cluster.d.ts:461:         * cluster.fork(); // http worker
+node_modules\@types\node\cluster.d.ts:469:         * A reference to the current worker object. Not available in the 
+primary process.
+node_modules\@types\node\cluster.d.ts:478:         * } else if (cluster.isWorker) {
+node_modules\@types\node\cluster.d.ts:479:         *   console.log(`I am worker #${cluster.worker.id}`);
+node_modules\@types\node\cluster.d.ts:484:        readonly worker?: Worker;
+node_modules\@types\node\cluster.d.ts:486:         * A hash that stores the active worker objects, keyed by `id` 
+field. This makes it easy to loop through all the workers. It is only available in the primary process.
+node_modules\@types\node\cluster.d.ts:488:         * A worker is removed from `cluster.workers` after the worker has 
+disconnected _and_ exited. The order between these two events cannot be determined in advance. However, it
+node_modules\@types\node\cluster.d.ts:489:         * is guaranteed that the removal from the `cluster.workers` list 
+happens before the last `'disconnect'` or `'exit'` event is emitted.
+node_modules\@types\node\cluster.d.ts:494:         * for (const worker of Object.values(cluster.workers)) {
+node_modules\@types\node\cluster.d.ts:495:         *   worker.send('big announcement to all workers');
+node_modules\@types\node\cluster.d.ts:500:        readonly workers?: NodeJS.Dict<Worker>;
+node_modules\@types\node\cluster.d.ts:514:        addListener(event: "disconnect", listener: (worker: Worker) => 
+void): this;
+node_modules\@types\node\cluster.d.ts:515:        addListener(event: "exit", listener: (worker: Worker, code: number, 
+signal: string) => void): this;
+node_modules\@types\node\cluster.d.ts:516:        addListener(event: "fork", listener: (worker: Worker) => void): this;
+node_modules\@types\node\cluster.d.ts:517:        addListener(event: "listening", listener: (worker: Worker, address: 
+Address) => void): this;
+node_modules\@types\node\cluster.d.ts:520:            listener: (worker: Worker, message: any, handle: net.Socket | 
+net.Server) => void,
+node_modules\@types\node\cluster.d.ts:522:        addListener(event: "online", listener: (worker: Worker) => void): 
+this;
+node_modules\@types\node\cluster.d.ts:525:        emit(event: "disconnect", worker: Worker): boolean;
+node_modules\@types\node\cluster.d.ts:526:        emit(event: "exit", worker: Worker, code: number, signal: string): 
+boolean;
+node_modules\@types\node\cluster.d.ts:527:        emit(event: "fork", worker: Worker): boolean;
+node_modules\@types\node\cluster.d.ts:528:        emit(event: "listening", worker: Worker, address: Address): boolean;
+node_modules\@types\node\cluster.d.ts:529:        emit(event: "message", worker: Worker, message: any, handle: 
+net.Socket | net.Server): boolean;
+node_modules\@types\node\cluster.d.ts:530:        emit(event: "online", worker: Worker): boolean;
+node_modules\@types\node\cluster.d.ts:533:        on(event: "disconnect", listener: (worker: Worker) => void): this;
+node_modules\@types\node\cluster.d.ts:534:        on(event: "exit", listener: (worker: Worker, code: number, signal: 
+string) => void): this;
+node_modules\@types\node\cluster.d.ts:535:        on(event: "fork", listener: (worker: Worker) => void): this;
+node_modules\@types\node\cluster.d.ts:536:        on(event: "listening", listener: (worker: Worker, address: Address) 
+=> void): this;
+node_modules\@types\node\cluster.d.ts:537:        on(event: "message", listener: (worker: Worker, message: any, 
+handle: net.Socket | net.Server) => void): this; // the handle is a net.Socket or net.Server object, or undefined.
+node_modules\@types\node\cluster.d.ts:538:        on(event: "online", listener: (worker: Worker) => void): this;
+node_modules\@types\node\cluster.d.ts:541:        once(event: "disconnect", listener: (worker: Worker) => void): this;
+node_modules\@types\node\cluster.d.ts:542:        once(event: "exit", listener: (worker: Worker, code: number, signal: 
+string) => void): this;
+node_modules\@types\node\cluster.d.ts:543:        once(event: "fork", listener: (worker: Worker) => void): this;
+node_modules\@types\node\cluster.d.ts:544:        once(event: "listening", listener: (worker: Worker, address: 
+Address) => void): this;
+node_modules\@types\node\cluster.d.ts:545:        once(event: "message", listener: (worker: Worker, message: any, 
+handle: net.Socket | net.Server) => void): this; // the handle is a net.Socket or net.Server object, or undefined.
+node_modules\@types\node\cluster.d.ts:546:        once(event: "online", listener: (worker: Worker) => void): this;
+node_modules\@types\node\cluster.d.ts:549:        prependListener(event: "disconnect", listener: (worker: Worker) => 
+void): this;
+node_modules\@types\node\cluster.d.ts:550:        prependListener(event: "exit", listener: (worker: Worker, code: 
+number, signal: string) => void): this;
+node_modules\@types\node\cluster.d.ts:551:        prependListener(event: "fork", listener: (worker: Worker) => void): 
+this;
+node_modules\@types\node\cluster.d.ts:552:        prependListener(event: "listening", listener: (worker: Worker, 
+address: Address) => void): this;
+node_modules\@types\node\cluster.d.ts:555:            listener: (worker: Worker, message: any, handle: net.Socket | 
+net.Server) => void,
+node_modules\@types\node\cluster.d.ts:557:        prependListener(event: "online", listener: (worker: Worker) => 
+void): this;
+node_modules\@types\node\cluster.d.ts:560:        prependOnceListener(event: "disconnect", listener: (worker: Worker) 
+=> void): this;
+node_modules\@types\node\cluster.d.ts:561:        prependOnceListener(event: "exit", listener: (worker: Worker, code: 
+number, signal: string) => void): this;
+node_modules\@types\node\cluster.d.ts:562:        prependOnceListener(event: "fork", listener: (worker: Worker) => 
+void): this;
+node_modules\@types\node\cluster.d.ts:563:        prependOnceListener(event: "listening", listener: (worker: Worker, 
+address: Address) => void): this;
+node_modules\@types\node\cluster.d.ts:567:            listener: (worker: Worker, message: any, handle: net.Socket | 
+net.Server) => void,
+node_modules\@types\node\cluster.d.ts:569:        prependOnceListener(event: "online", listener: (worker: Worker) => 
+void): this;
+node_modules\@types\node\dgram.d.ts:108:         * When sharing a UDP socket across multiple `cluster` workers, 
+the`socket.addMembership()` function must be called only once or an`EADDRINUSE` error will occur:
+node_modules\@types\node\dns.d.ts:792:     * [worker 
+threads](https://nodejs.org/docs/latest-v22.x/api/worker_threads.html), {@link setDefaultResultOrder} from the main
+node_modules\@types\node\dns.d.ts:793:     * thread won't affect the default dns orders in workers.
+node_modules\@types\node\index.d.ts:96:/// <reference path="worker_threads.d.ts" />
+node_modules\@types\node\inspector.d.ts:24:         * An exception will be thrown if this API was not called on a 
+Worker thread.
+node_modules\@types\node\inspector.d.ts:233:         * An exception will be thrown if this API was not called on a 
+Worker thread.
+node_modules\@types\node\inspector.generated.d.ts:1648:    namespace NodeWorker {
+node_modules\@types\node\inspector.generated.d.ts:1649:        type WorkerID = string;
+node_modules\@types\node\inspector.generated.d.ts:1654:        interface WorkerInfo {
+node_modules\@types\node\inspector.generated.d.ts:1655:            workerId: WorkerID;
+node_modules\@types\node\inspector.generated.d.ts:1660:        interface SendMessageToWorkerParameterType {
+node_modules\@types\node\inspector.generated.d.ts:1669:             * Whether to new workers should be paused until 
+the frontend sends `Runtime.runIfWaitingForDebugger`
+node_modules\@types\node\inspector.generated.d.ts:1677:        interface AttachedToWorkerEventDataType {
+node_modules\@types\node\inspector.generated.d.ts:1682:            workerInfo: WorkerInfo;
+node_modules\@types\node\inspector.generated.d.ts:1685:        interface DetachedFromWorkerEventDataType {
+node_modules\@types\node\inspector.generated.d.ts:1691:        interface ReceivedMessageFromWorkerEventDataType {
+node_modules\@types\node\inspector.generated.d.ts:2303:        post(method: "NodeWorker.sendMessageToWorker", params?: 
+NodeWorker.SendMessageToWorkerParameterType, callback?: (err: Error | null) => void): void;
+node_modules\@types\node\inspector.generated.d.ts:2304:        post(method: "NodeWorker.sendMessageToWorker", 
+callback?: (err: Error | null) => void): void;
+node_modules\@types\node\inspector.generated.d.ts:2306:         * Instructs the inspector to attach to running 
+workers. Will also attach to new workers
+node_modules\@types\node\inspector.generated.d.ts:2309:        post(method: "NodeWorker.enable", params?: 
+NodeWorker.EnableParameterType, callback?: (err: Error | null) => void): void;
+node_modules\@types\node\inspector.generated.d.ts:2310:        post(method: "NodeWorker.enable", callback?: (err: 
+Error | null) => void): void;
+node_modules\@types\node\inspector.generated.d.ts:2312:         * Detaches from all running workers and disables 
+attaching to new workers as they are started.
+node_modules\@types\node\inspector.generated.d.ts:2314:        post(method: "NodeWorker.disable", callback?: (err: 
+Error | null) => void): void;
+node_modules\@types\node\inspector.generated.d.ts:2316:         * Detached from the worker with given sessionId.
+node_modules\@types\node\inspector.generated.d.ts:2318:        post(method: "NodeWorker.detach", params?: 
+NodeWorker.DetachParameterType, callback?: (err: Error | null) => void): void;
+node_modules\@types\node\inspector.generated.d.ts:2319:        post(method: "NodeWorker.detach", callback?: (err: 
+Error | null) => void): void;
+node_modules\@types\node\inspector.generated.d.ts:2460:         * Issued when attached to a worker.
+node_modules\@types\node\inspector.generated.d.ts:2462:        addListener(event: "NodeWorker.attachedToWorker", 
+listener: (message: InspectorNotification<NodeWorker.AttachedToWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2464:         * Issued when detached from the worker.
+node_modules\@types\node\inspector.generated.d.ts:2466:        addListener(event: "NodeWorker.detachedFromWorker", 
+listener: (message: InspectorNotification<NodeWorker.DetachedFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2469:         * (session ID is provided in attachedToWorker 
+notification).
+node_modules\@types\node\inspector.generated.d.ts:2471:        addListener(event: 
+"NodeWorker.receivedMessageFromWorker", listener: (message: 
+InspectorNotification<NodeWorker.ReceivedMessageFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2524:        emit(event: "NodeWorker.attachedToWorker", message: 
+InspectorNotification<NodeWorker.AttachedToWorkerEventDataType>): boolean;
+node_modules\@types\node\inspector.generated.d.ts:2525:        emit(event: "NodeWorker.detachedFromWorker", message: 
+InspectorNotification<NodeWorker.DetachedFromWorkerEventDataType>): boolean;
+node_modules\@types\node\inspector.generated.d.ts:2526:        emit(event: "NodeWorker.receivedMessageFromWorker", 
+message: InspectorNotification<NodeWorker.ReceivedMessageFromWorkerEventDataType>): boolean;
+node_modules\@types\node\inspector.generated.d.ts:2619:         * Issued when attached to a worker.
+node_modules\@types\node\inspector.generated.d.ts:2621:        on(event: "NodeWorker.attachedToWorker", listener: 
+(message: InspectorNotification<NodeWorker.AttachedToWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2623:         * Issued when detached from the worker.
+node_modules\@types\node\inspector.generated.d.ts:2625:        on(event: "NodeWorker.detachedFromWorker", listener: 
+(message: InspectorNotification<NodeWorker.DetachedFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2628:         * (session ID is provided in attachedToWorker 
+notification).
+node_modules\@types\node\inspector.generated.d.ts:2630:        on(event: "NodeWorker.receivedMessageFromWorker", 
+listener: (message: InspectorNotification<NodeWorker.ReceivedMessageFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2742:         * Issued when attached to a worker.
+node_modules\@types\node\inspector.generated.d.ts:2744:        once(event: "NodeWorker.attachedToWorker", listener: 
+(message: InspectorNotification<NodeWorker.AttachedToWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2746:         * Issued when detached from the worker.
+node_modules\@types\node\inspector.generated.d.ts:2748:        once(event: "NodeWorker.detachedFromWorker", listener: 
+(message: InspectorNotification<NodeWorker.DetachedFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2751:         * (session ID is provided in attachedToWorker 
+notification).
+node_modules\@types\node\inspector.generated.d.ts:2753:        once(event: "NodeWorker.receivedMessageFromWorker", 
+listener: (message: InspectorNotification<NodeWorker.ReceivedMessageFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2865:         * Issued when attached to a worker.
+node_modules\@types\node\inspector.generated.d.ts:2867:        prependListener(event: "NodeWorker.attachedToWorker", 
+listener: (message: InspectorNotification<NodeWorker.AttachedToWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2869:         * Issued when detached from the worker.
+node_modules\@types\node\inspector.generated.d.ts:2871:        prependListener(event: "NodeWorker.detachedFromWorker", 
+listener: (message: InspectorNotification<NodeWorker.DetachedFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2874:         * (session ID is provided in attachedToWorker 
+notification).
+node_modules\@types\node\inspector.generated.d.ts:2876:        prependListener(event: 
+"NodeWorker.receivedMessageFromWorker", listener: (message: 
+InspectorNotification<NodeWorker.ReceivedMessageFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2988:         * Issued when attached to a worker.
+node_modules\@types\node\inspector.generated.d.ts:2990:        prependOnceListener(event: 
+"NodeWorker.attachedToWorker", listener: (message: InspectorNotification<NodeWorker.AttachedToWorkerEventDataType>) => 
+void): this;
+node_modules\@types\node\inspector.generated.d.ts:2992:         * Issued when detached from the worker.
+node_modules\@types\node\inspector.generated.d.ts:2994:        prependOnceListener(event: 
+"NodeWorker.detachedFromWorker", listener: (message: 
+InspectorNotification<NodeWorker.DetachedFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:2997:         * (session ID is provided in attachedToWorker 
+notification).
+node_modules\@types\node\inspector.generated.d.ts:2999:        prependOnceListener(event: 
+"NodeWorker.receivedMessageFromWorker", listener: (message: 
+InspectorNotification<NodeWorker.ReceivedMessageFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:3040:        NodeWorker,
+node_modules\@types\node\inspector.generated.d.ts:3058:        NodeWorker,
+node_modules\@types\node\inspector.generated.d.ts:3341:        post(method: "NodeWorker.sendMessageToWorker", params?: 
+NodeWorker.SendMessageToWorkerParameterType): Promise<void>;
+node_modules\@types\node\inspector.generated.d.ts:3343:         * Instructs the inspector to attach to running 
+workers. Will also attach to new workers
+node_modules\@types\node\inspector.generated.d.ts:3346:        post(method: "NodeWorker.enable", params?: 
+NodeWorker.EnableParameterType): Promise<void>;
+node_modules\@types\node\inspector.generated.d.ts:3348:         * Detaches from all running workers and disables 
+attaching to new workers as they are started.
+node_modules\@types\node\inspector.generated.d.ts:3350:        post(method: "NodeWorker.disable"): Promise<void>;
+node_modules\@types\node\inspector.generated.d.ts:3352:         * Detached from the worker with given sessionId.
+node_modules\@types\node\inspector.generated.d.ts:3354:        post(method: "NodeWorker.detach", params?: 
+NodeWorker.DetachParameterType): Promise<void>;
+node_modules\@types\node\inspector.generated.d.ts:3483:         * Issued when attached to a worker.
+node_modules\@types\node\inspector.generated.d.ts:3485:        addListener(event: "NodeWorker.attachedToWorker", 
+listener: (message: InspectorNotification<NodeWorker.AttachedToWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:3487:         * Issued when detached from the worker.
+node_modules\@types\node\inspector.generated.d.ts:3489:        addListener(event: "NodeWorker.detachedFromWorker", 
+listener: (message: InspectorNotification<NodeWorker.DetachedFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:3492:         * (session ID is provided in attachedToWorker 
+notification).
+node_modules\@types\node\inspector.generated.d.ts:3494:        addListener(event: 
+"NodeWorker.receivedMessageFromWorker", listener: (message: 
+InspectorNotification<NodeWorker.ReceivedMessageFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:3547:        emit(event: "NodeWorker.attachedToWorker", message: 
+InspectorNotification<NodeWorker.AttachedToWorkerEventDataType>): boolean;
+node_modules\@types\node\inspector.generated.d.ts:3548:        emit(event: "NodeWorker.detachedFromWorker", message: 
+InspectorNotification<NodeWorker.DetachedFromWorkerEventDataType>): boolean;
+node_modules\@types\node\inspector.generated.d.ts:3549:        emit(event: "NodeWorker.receivedMessageFromWorker", 
+message: InspectorNotification<NodeWorker.ReceivedMessageFromWorkerEventDataType>): boolean;
+node_modules\@types\node\inspector.generated.d.ts:3642:         * Issued when attached to a worker.
+node_modules\@types\node\inspector.generated.d.ts:3644:        on(event: "NodeWorker.attachedToWorker", listener: 
+(message: InspectorNotification<NodeWorker.AttachedToWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:3646:         * Issued when detached from the worker.
+node_modules\@types\node\inspector.generated.d.ts:3648:        on(event: "NodeWorker.detachedFromWorker", listener: 
+(message: InspectorNotification<NodeWorker.DetachedFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:3651:         * (session ID is provided in attachedToWorker 
+notification).
+node_modules\@types\node\inspector.generated.d.ts:3653:        on(event: "NodeWorker.receivedMessageFromWorker", 
+listener: (message: InspectorNotification<NodeWorker.ReceivedMessageFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:3765:         * Issued when attached to a worker.
+node_modules\@types\node\inspector.generated.d.ts:3767:        once(event: "NodeWorker.attachedToWorker", listener: 
+(message: InspectorNotification<NodeWorker.AttachedToWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:3769:         * Issued when detached from the worker.
+node_modules\@types\node\inspector.generated.d.ts:3771:        once(event: "NodeWorker.detachedFromWorker", listener: 
+(message: InspectorNotification<NodeWorker.DetachedFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:3774:         * (session ID is provided in attachedToWorker 
+notification).
+node_modules\@types\node\inspector.generated.d.ts:3776:        once(event: "NodeWorker.receivedMessageFromWorker", 
+listener: (message: InspectorNotification<NodeWorker.ReceivedMessageFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:3888:         * Issued when attached to a worker.
+node_modules\@types\node\inspector.generated.d.ts:3890:        prependListener(event: "NodeWorker.attachedToWorker", 
+listener: (message: InspectorNotification<NodeWorker.AttachedToWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:3892:         * Issued when detached from the worker.
+node_modules\@types\node\inspector.generated.d.ts:3894:        prependListener(event: "NodeWorker.detachedFromWorker", 
+listener: (message: InspectorNotification<NodeWorker.DetachedFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:3897:         * (session ID is provided in attachedToWorker 
+notification).
+node_modules\@types\node\inspector.generated.d.ts:3899:        prependListener(event: 
+"NodeWorker.receivedMessageFromWorker", listener: (message: 
+InspectorNotification<NodeWorker.ReceivedMessageFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:4011:         * Issued when attached to a worker.
+node_modules\@types\node\inspector.generated.d.ts:4013:        prependOnceListener(event: 
+"NodeWorker.attachedToWorker", listener: (message: InspectorNotification<NodeWorker.AttachedToWorkerEventDataType>) => 
+void): this;
+node_modules\@types\node\inspector.generated.d.ts:4015:         * Issued when detached from the worker.
+node_modules\@types\node\inspector.generated.d.ts:4017:        prependOnceListener(event: 
+"NodeWorker.detachedFromWorker", listener: (message: 
+InspectorNotification<NodeWorker.DetachedFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\inspector.generated.d.ts:4020:         * (session ID is provided in attachedToWorker 
+notification).
+node_modules\@types\node\inspector.generated.d.ts:4022:        prependOnceListener(event: 
+"NodeWorker.receivedMessageFromWorker", listener: (message: 
+InspectorNotification<NodeWorker.ReceivedMessageFromWorkerEventDataType>) => void): this;
+node_modules\@types\node\module.d.ts:104:         * This method only affects the current Node.js instance. To enable 
+it in child worker threads,
+node_modules\@types\node\module.d.ts:105:         * either call this method in child worker threads too, or set the
+node_modules\@types\node\module.d.ts:107:         * be inherited into the child workers. The directory can be obtained 
+either from the
+node_modules\@types\node\module.d.ts:197:             * [Transferable 
+objects](https://nodejs.org/docs/latest-v22.x/api/worker_threads.html#portpostmessagevalue-transferlist)
+node_modules\@types\node\module.d.ts:208:         * This feature requires `--allow-worker` if used with the
+node_modules\@types\node\perf_hooks.d.ts:612:         * request. If the resource is not intercepted by a worker the 
+property will always return 0.
+node_modules\@types\node\perf_hooks.d.ts:615:        readonly workerStart: number;
+node_modules\@types\node\process.d.ts:5:    import { Worker } from "node:worker_threads";
+node_modules\@types\node\process.d.ts:116:        "worker_threads": typeof import("worker_threads");
+node_modules\@types\node\process.d.ts:117:        "node:worker_threads": typeof import("node:worker_threads");
+node_modules\@types\node\process.d.ts:344:            type WorkerListener = (worker: Worker) => void;
+node_modules\@types\node\process.d.ts:420:                 * * `worker` - Worker thread spawning operation
+node_modules\@types\node\process.d.ts:682:                 * Refer to `Worker constructor` for the detailed behavior 
+of worker
+node_modules\@types\node\process.d.ts:701:                 * This feature is not available in `Worker` threads.
+node_modules\@types\node\process.d.ts:722:                 * This feature is not available in `Worker` threads.
+node_modules\@types\node\process.d.ts:870:                 * to other `Worker` threads.
+node_modules\@types\node\process.d.ts:922:                 * Unless explicitly specified when creating a `Worker` 
+instance,
+node_modules\@types\node\process.d.ts:923:                 * each `Worker` thread has its own copy of `process.env`, 
+based on its
+node_modules\@types\node\process.d.ts:925:                 * to the `Worker` constructor. Changes to `process.env` 
+will not be visible
+node_modules\@types\node\process.d.ts:926:                 * across `Worker` threads, and only the main thread can 
+make changes that
+node_modules\@types\node\process.d.ts:927:                 * are visible to the operating system or to native add-ons. 
+On Windows, a copy of `process.env` on a `Worker` instance operates in a case-sensitive manner
+node_modules\@types\node\process.d.ts:992:                 * In `Worker` threads, this function stops the current 
+thread rather
+node_modules\@types\node\process.d.ts:1106:                 * This feature is not available in `Worker` threads.
+node_modules\@types\node\process.d.ts:1150:                 * This feature is not available in `Worker` threads.
+node_modules\@types\node\process.d.ts:1193:                 * This feature is not available in `Worker` threads.
+node_modules\@types\node\process.d.ts:1237:                 * This feature is not available in `Worker` threads.
+node_modules\@types\node\process.d.ts:1282:                 * This feature is not available in `Worker` threads.
+node_modules\@types\node\process.d.ts:1498:                 * the current worker thread, in an object with properties 
+`user` and `system`, whose
+node_modules\@types\node\process.d.ts:1753:                 * Can only be set if not in worker thread.
+node_modules\@types\node\process.d.ts:1987:                addListener(event: "workerMessage", listener: (value: any, 
+source: number) => void): this;
+node_modules\@types\node\process.d.ts:1990:                addListener(event: "worker", listener: WorkerListener): 
+this;
+node_modules\@types\node\process.d.ts:2000:                emit(event: "workerMessage", value: any, source: number): 
+this;
+node_modules\@types\node\process.d.ts:2008:                emit(event: "worker", listener: WorkerListener): this;
+node_modules\@types\node\process.d.ts:2020:                on(event: "worker", listener: WorkerListener): this;
+node_modules\@types\node\process.d.ts:2021:                on(event: "workerMessage", listener: (value: any, source: 
+number) => void): this;
+node_modules\@types\node\process.d.ts:2034:                once(event: "worker", listener: WorkerListener): this;
+node_modules\@types\node\process.d.ts:2035:                once(event: "workerMessage", listener: (value: any, source: 
+number) => void): this;
+node_modules\@types\node\process.d.ts:2046:                prependListener(event: "workerMessage", listener: (value: 
+any, source: number) => void): this;
+node_modules\@types\node\process.d.ts:2049:                prependListener(event: "worker", listener: WorkerListener): 
+this;
+node_modules\@types\node\process.d.ts:2059:                prependOnceListener(event: "workerMessage", listener: 
+(value: any, source: number) => void): this;
+node_modules\@types\node\process.d.ts:2062:                prependOnceListener(event: "worker", listener: 
+WorkerListener): this;
+node_modules\@types\node\process.d.ts:2072:                listeners(event: "workerMessage"): ((value: any, source: 
+number) => void)[];
+node_modules\@types\node\process.d.ts:2075:                listeners(event: "worker"): WorkerListener[];
+node_modules\@types\node\timers.d.ts:135:                 * across `worker_threads` it must first be passed to the 
+correct
+node_modules\@types\node\tls.d.ts:1043:     * workers.
+node_modules\@types\node\trace_events.d.ts:91: * The features from this module are not available in 
+[`Worker`](https://nodejs.org/docs/latest-v22.x/api/worker_threads.html#class-worker) threads.
+node_modules\@types\node\url.d.ts:430:         * `Blob` objects are registered within the current thread. If using 
+Worker
+node_modules\@types\node\url.d.ts:431:         * Threads, `Blob` objects registered within one Worker will not be 
+available
+node_modules\@types\node\url.d.ts:432:         * to other workers or the main thread.
+node_modules\@types\node\v8.d.ts:342:     * A heap snapshot is specific to a single V8 isolate. When using `worker 
+threads`, a heap snapshot generated from the main thread will
+node_modules\@types\node\v8.d.ts:343:     * not contain any information about the workers, and vice versa.
+node_modules\@types\node\v8.d.ts:355:     *   Worker,
+node_modules\@types\node\v8.d.ts:358:     * } from 'node:worker_threads';
+node_modules\@types\node\v8.d.ts:361:     *   const worker = new Worker(__filename);
+node_modules\@types\node\v8.d.ts:363:     *   worker.once('message', (filename) => {
+node_modules\@types\node\v8.d.ts:364:     *     console.log(`worker heapdump: ${filename}`);
+node_modules\@types\node\v8.d.ts:369:     *   // Tell the worker to create a heapdump.
+node_modules\@types\node\v8.d.ts:370:     *   worker.postMessage('heapdump');
+node_modules\@types\node\v8.d.ts:374:     *       // Generate a heapdump for the worker
+node_modules\@types\node\v8.d.ts:384:     * worker thread.
+node_modules\@types\node\worker_threads.d.ts:2: * The `node:worker_threads` module enables the use of threads that 
+execute
+node_modules\@types\node\worker_threads.d.ts:6: * import worker from 'node:worker_threads';
+node_modules\@types\node\worker_threads.d.ts:9: * Workers (threads) are useful for performing CPU-intensive JavaScript 
+operations.
+node_modules\@types\node\worker_threads.d.ts:11: * asynchronous I/O operations are more efficient than Workers can be.
+node_modules\@types\node\worker_threads.d.ts:13: * Unlike `child_process` or `cluster`, `worker_threads` can share 
+memory. They do
+node_modules\@types\node\worker_threads.d.ts:18: *   Worker,
+node_modules\@types\node\worker_threads.d.ts:21: *   workerData,
+node_modules\@types\node\worker_threads.d.ts:22: * } from 'node:worker_threads';
+node_modules\@types\node\worker_threads.d.ts:26: *   const script = workerData;
+node_modules\@types\node\worker_threads.d.ts:32: *     const worker = new Worker(new URL(import.meta.url), {
+node_modules\@types\node\worker_threads.d.ts:33: *       workerData: script,
+node_modules\@types\node\worker_threads.d.ts:35: *     worker.on('message', resolve);
+node_modules\@types\node\worker_threads.d.ts:36: *     worker.on('error', reject);
+node_modules\@types\node\worker_threads.d.ts:37: *     worker.on('exit', (code) => {
+node_modules\@types\node\worker_threads.d.ts:39: *         reject(new Error(`Worker stopped with exit code ${code}`));
+node_modules\@types\node\worker_threads.d.ts:45: * The above example spawns a Worker thread for each `parseJSAsync()` 
+call. In
+node_modules\@types\node\worker_threads.d.ts:46: * practice, use a pool of Workers for these kinds of tasks. 
+Otherwise, the
+node_modules\@types\node\worker_threads.d.ts:47: * overhead of creating Workers would likely exceed their benefit.
+node_modules\@types\node\worker_threads.d.ts:49: * When implementing a worker pool, use the `AsyncResource` API to 
+inform
+node_modules\@types\node\worker_threads.d.ts:51: * correlation between tasks and their outcomes. See `"Using 
+AsyncResource for a Worker thread pool"` in the `async_hooks` documentation for an example implementation.
+node_modules\@types\node\worker_threads.d.ts:53: * Worker threads inherit non-process-specific options by default. 
+Refer to `Worker constructor options` to know how to customize worker thread options,
+node_modules\@types\node\worker_threads.d.ts:55: * @see 
+[source](https://github.com/nodejs/node/blob/v22.x/lib/worker_threads.js)
+node_modules\@types\node\worker_threads.d.ts:57:declare module "worker_threads" {
+node_modules\@types\node\worker_threads.d.ts:73:    const workerData: any;
+node_modules\@types\node\worker_threads.d.ts:75:     * Instances of the `worker.MessageChannel` class represent an 
+asynchronous,
+node_modules\@types\node\worker_threads.d.ts:80:     * import { MessageChannel } from 'node:worker_threads';
+node_modules\@types\node\worker_threads.d.ts:93:    interface WorkerPerformance {
+node_modules\@types\node\worker_threads.d.ts:104:    /** @deprecated Use `import { Transferable } from 
+"node:worker_threads"` instead. */
+node_modules\@types\node\worker_threads.d.ts:107:     * Instances of the `worker.MessagePort` class represent one end 
+of an
+node_modules\@types\node\worker_threads.d.ts:109:     * structured data, memory regions and other `MessagePort`s 
+between different `Worker`s.
+node_modules\@types\node\worker_threads.d.ts:126:         * the [HTML structured clone 
+algorithm](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+node_modules\@types\node\worker_threads.d.ts:138:         * import { MessageChannel } from 'node:worker_threads';
+node_modules\@types\node\worker_threads.d.ts:160:         * import { MessageChannel } from 'node:worker_threads';
+node_modules\@types\node\worker_threads.d.ts:178:         * // multiple `Worker` threads that are children of the same 
+parent thread.
+node_modules\@types\node\worker_threads.d.ts:253:    interface WorkerOptions {
+node_modules\@types\node\worker_threads.d.ts:256:         * `process.argv` in the worker. This is mostly similar to 
+the `workerData`
+node_modules\@types\node\worker_threads.d.ts:263:        workerData?: any;
+node_modules\@types\node\worker_threads.d.ts:270:         * Additional data to send in the first worker message.
+node_modules\@types\node\worker_threads.d.ts:278:         * An optional `name` to be appended to the worker title
+node_modules\@types\node\worker_threads.d.ts:280:         * `[worker ${id}] ${name}`.
+node_modules\@types\node\worker_threads.d.ts:298:         * The default maximum stack size for the thread. Small 
+values may lead to unusable Worker instances.
+node_modules\@types\node\worker_threads.d.ts:304:     * The `Worker` class represents an independent JavaScript 
+execution thread.
+node_modules\@types\node\worker_threads.d.ts:307:     * Notable differences inside a Worker environment are:
+node_modules\@types\node\worker_threads.d.ts:310:     * * The `import { isMainThread } from 'node:worker_threads'` 
+variable is set to `false`.
+node_modules\@types\node\worker_threads.d.ts:311:     * * The `import { parentPort } from 'node:worker_threads'` 
+message port is available.
+node_modules\@types\node\worker_threads.d.ts:318:     * threads, and are not visible to native add-ons (unless 
+`worker.SHARE_ENV` is passed as the `env` option to the `Worker` constructor). On Windows, unlike the main thread, a 
+copy of the
+node_modules\@types\node\worker_threads.d.ts:322:     * * Execution may stop at any point as a result of 
+`worker.terminate()` being invoked.
+node_modules\@types\node\worker_threads.d.ts:327:     * Creating `Worker` instances inside of other `Worker`s is 
+possible.
+node_modules\@types\node\worker_threads.d.ts:329:     * Like [Web 
+Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API) and the `node:cluster module`, two-way 
+communication
+node_modules\@types\node\worker_threads.d.ts:330:     * can be achieved through inter-thread message passing. 
+Internally, a `Worker` has
+node_modules\@types\node\worker_threads.d.ts:332:     * other when the `Worker` is created. While the `MessagePort` 
+object on the parent
+node_modules\@types\node\worker_threads.d.ts:333:     * side is not directly exposed, its functionalities are exposed 
+through `worker.postMessage()` and the `worker.on('message')` event
+node_modules\@types\node\worker_threads.d.ts:334:     * on the `Worker` object for the parent thread.
+node_modules\@types\node\worker_threads.d.ts:348:     *   Worker, MessageChannel, MessagePort, isMainThread, 
+parentPort,
+node_modules\@types\node\worker_threads.d.ts:349:     * } from 'node:worker_threads';
+node_modules\@types\node\worker_threads.d.ts:351:     *   const worker = new Worker(__filename);
+node_modules\@types\node\worker_threads.d.ts:353:     *   worker.postMessage({ hereIsYourPort: subChannel.port1 }, 
+[subChannel.port1]);
+node_modules\@types\node\worker_threads.d.ts:360:     *     value.hereIsYourPort.postMessage('the worker is sending 
+this');
+node_modules\@types\node\worker_threads.d.ts:367:    class Worker extends EventEmitter {
+node_modules\@types\node\worker_threads.d.ts:369:         * If `stdin: true` was passed to the `Worker` constructor, 
+this is a
+node_modules\@types\node\worker_threads.d.ts:371:         * the worker thread as `process.stdin`.
+node_modules\@types\node\worker_threads.d.ts:376:         * This is a readable stream which contains data written to 
+`process.stdout` inside the worker thread. If `stdout: true` was not passed to the `Worker` constructor, then data is 
+piped to the
+node_modules\@types\node\worker_threads.d.ts:382:         * This is a readable stream which contains data written to 
+`process.stderr` inside the worker thread. If `stderr: true` was not passed to the `Worker` constructor, then data is 
+piped to the
+node_modules\@types\node\worker_threads.d.ts:388:         * An integer identifier for the referenced thread. Inside 
+the worker thread,
+node_modules\@types\node\worker_threads.d.ts:389:         * it is available as `import { threadId } from 
+'node:worker_threads'`.
+node_modules\@types\node\worker_threads.d.ts:390:         * This value is unique for each `Worker` instance inside a 
+single process.
+node_modules\@types\node\worker_threads.d.ts:395:         * Provides the set of JS engine resource constraints for 
+this Worker thread.
+node_modules\@types\node\worker_threads.d.ts:396:         * If the `resourceLimits` option was passed to the `Worker` 
+constructor,
+node_modules\@types\node\worker_threads.d.ts:399:         * If the worker has stopped, the return value is an empty 
+object.
+node_modules\@types\node\worker_threads.d.ts:404:         * An object that can be used to query performance 
+information from a worker
+node_modules\@types\node\worker_threads.d.ts:408:        readonly performance: WorkerPerformance;
+node_modules\@types\node\worker_threads.d.ts:410:         * @param filename  The path to the Worker's main script or 
+module.
+node_modules\@types\node\worker_threads.d.ts:414:        constructor(filename: string | URL, options?: WorkerOptions);
+node_modules\@types\node\worker_threads.d.ts:416:         * Send a message to the worker that is received via 
+`require('node:worker_threads').parentPort.on('message')`.
+node_modules\@types\node\worker_threads.d.ts:422:         * Opposite of `unref()`, calling `ref()` on a previously 
+`unref()`ed worker does _not_ let the program exit if it's the only active handle left (the default
+node_modules\@types\node\worker_threads.d.ts:423:         * behavior). If the worker is `ref()`ed, calling `ref()` 
+again has
+node_modules\@types\node\worker_threads.d.ts:429:         * Calling `unref()` on a worker allows the thread to exit if 
+this is the only
+node_modules\@types\node\worker_threads.d.ts:430:         * active handle in the event system. If the worker is 
+already `unref()`ed calling `unref()` again has no effect.
+node_modules\@types\node\worker_threads.d.ts:435:         * Stop all JavaScript execution in the worker thread as soon 
+as possible.
+node_modules\@types\node\worker_threads.d.ts:442:         * or reject with an `ERR_WORKER_NOT_RUNNING` error if the 
+worker is no longer running.
+node_modules\@types\node\worker_threads.d.ts:448:         * Returns a readable stream for a V8 snapshot of the current 
+state of the Worker.
+node_modules\@types\node\worker_threads.d.ts:451:         * If the Worker thread is no longer running, which may occur 
+before the `'exit' event` is emitted, the returned `Promise` is rejected
+node_modules\@types\node\worker_threads.d.ts:452:         * immediately with an `ERR_WORKER_NOT_RUNNING` error.
+node_modules\@types\node\worker_threads.d.ts:459:         * or reject with an `ERR_WORKER_NOT_RUNNING` error if the 
+worker is no longer running.
+node_modules\@types\node\worker_threads.d.ts:465:         * Calls `worker.terminate()` when the dispose scope is 
+exited.
+node_modules\@types\node\worker_threads.d.ts:469:         *   await using worker = new Worker('for (;;) {}', { eval: 
+true });
+node_modules\@types\node\worker_threads.d.ts:470:         *   // Worker is automatically terminate when the scope is 
+exited.
+node_modules\@types\node\worker_threads.d.ts:536:     *   Worker,
+node_modules\@types\node\worker_threads.d.ts:537:     * } from 'node:worker_threads';
+node_modules\@types\node\worker_threads.d.ts:548:     *     new Worker(__filename);
+node_modules\@types\node\worker_threads.d.ts:550:     *   bc.postMessage('hello from every worker');
+node_modules\@types\node\worker_threads.d.ts:591:     * import { MessageChannel, markAsUntransferable } from 
+'node:worker_threads';
+node_modules\@types\node\worker_threads.d.ts:630:     * const { markAsUncloneable } = require('node:worker_threads');
+node_modules\@types\node\worker_threads.d.ts:669:     * import { MessageChannel, receiveMessageOnPort } from 
+'node:worker_threads';
+node_modules\@types\node\worker_threads.d.ts:689:     * Within a worker thread, `worker.getEnvironmentData()` returns 
+a clone
+node_modules\@types\node\worker_threads.d.ts:690:     * of data passed to the spawning thread's 
+`worker.setEnvironmentData()`.
+node_modules\@types\node\worker_threads.d.ts:691:     * Every new `Worker` receives its own copy of the environment 
+data
+node_modules\@types\node\worker_threads.d.ts:696:     *   Worker,
+node_modules\@types\node\worker_threads.d.ts:700:     * } from 'node:worker_threads';
+node_modules\@types\node\worker_threads.d.ts:704:     *   const worker = new Worker(__filename);
+node_modules\@types\node\worker_threads.d.ts:714:     * The `worker.setEnvironmentData()` API sets the content of 
+`worker.getEnvironmentData()` in the current thread and all new `Worker` instances spawned from the current context.
+node_modules\@types\node\worker_threads.d.ts:717:     * @param value Any arbitrary, cloneable JavaScript value that 
+will be cloned and passed automatically to all new `Worker` instances. If `value` is passed as `undefined`, any 
+previously set value
+node_modules\@types\node\worker_threads.d.ts:722:     * Sends a value to another worker, identified by its thread ID.
+node_modules\@types\node\worker_threads.d.ts:723:     * @param threadId The target thread ID. If the thread ID is 
+invalid, a `ERR_WORKER_MESSAGING_FAILED` error will be thrown.
+node_modules\@types\node\worker_threads.d.ts:724:     * If the target thread ID is the current thread ID, a 
+`ERR_WORKER_MESSAGING_SAME_THREAD` error will be thrown.
+node_modules\@types\node\worker_threads.d.ts:729:     * If the operation times out, a `ERR_WORKER_MESSAGING_TIMEOUT` 
+error is thrown.
+node_modules\@types\node\worker_threads.d.ts:744:    } from "worker_threads";
+node_modules\@types\node\worker_threads.d.ts:751:         * `BroadcastChannel` class is a global reference for `import 
+{ BroadcastChannel } from 'worker_threads'`
+node_modules\@types\node\worker_threads.d.ts:761:         * `MessageChannel` class is a global reference for `import { 
+MessageChannel } from 'worker_threads'`
+node_modules\@types\node\worker_threads.d.ts:771:         * `MessagePort` class is a global reference for `import { 
+MessagePort } from 'worker_threads'`
+node_modules\@types\node\worker_threads.d.ts:782:declare module "node:worker_threads" {
+node_modules\@types\node\worker_threads.d.ts:783:    export * from "worker_threads";
+node_modules\@types\node\zlib.d.ts:601:        const ZSTD_c_nbWorkers: number;
+node_modules\@types\react-dom\index.d.ts:80:    | "worker";
+node_modules\esbuild\lib\main.d.ts:669:   * By default esbuild runs the WebAssembly-based browser API in a web worker
+node_modules\esbuild\lib\main.d.ts:670:   * to avoid blocking the UI thread. This can be disabled by setting "worker"
+node_modules\esbuild\lib\main.d.ts:673:  worker?: boolean
+node_modules\react-router\dist\development\data-D4xhSy90.d.ts:1277:    as?: LiteralUnion<"audio" | "audioworklet" | 
+"document" | "embed" | "fetch" | "font" | "frame" | "iframe" | "image" | "manifest" | "object" | "paintworklet" | 
+"report" | "script" | "serviceworker" | "sharedworker" | "style" | "track" | "video" | "worker" | "xslt", string>;
+node_modules\react-router\dist\development\index-react-server.d.ts:1782:    as?: LiteralUnion<"audio" | "audioworklet" 
+| "document" | "embed" | "fetch" | "font" | "frame" | "iframe" | "image" | "manifest" | "object" | "paintworklet" | 
+"report" | "script" | "serviceworker" | "sharedworker" | "style" | "track" | "video" | "worker" | "xslt", string>;
+node_modules\react-router\dist\production\data-D4xhSy90.d.ts:1277:    as?: LiteralUnion<"audio" | "audioworklet" | 
+"document" | "embed" | "fetch" | "font" | "frame" | "iframe" | "image" | "manifest" | "object" | "paintworklet" | 
+"report" | "script" | "serviceworker" | "sharedworker" | "style" | "track" | "video" | "worker" | "xslt", string>;
+node_modules\react-router\dist\production\index-react-server.d.ts:1782:    as?: LiteralUnion<"audio" | "audioworklet" 
+| "document" | "embed" | "fetch" | "font" | "frame" | "iframe" | "image" | "manifest" | "object" | "paintworklet" | 
+"report" | "script" | "serviceworker" | "sharedworker" | "style" | "track" | "video" | "worker" | "xslt", string>;
+node_modules\typescript\lib\lib.d.ts:21:/// <reference lib="webworker.importscripts" />
+node_modules\typescript\lib\lib.dom.d.ts:2030:    type?: WorkerType;
+node_modules\typescript\lib\lib.dom.d.ts:2031:    updateViaCache?: ServiceWorkerUpdateViaCache;
+node_modules\typescript\lib\lib.dom.d.ts:2538:interface WorkerOptions {
+node_modules\typescript\lib\lib.dom.d.ts:2541:    type?: WorkerType;
+node_modules\typescript\lib\lib.dom.d.ts:2839:interface AbstractWorkerEventMap {
+node_modules\typescript\lib\lib.dom.d.ts:2843:interface AbstractWorker {
+node_modules\typescript\lib\lib.dom.d.ts:2844:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorker/error_event) */
+node_modules\typescript\lib\lib.dom.d.ts:2845:    onerror: ((this: AbstractWorker, ev: ErrorEvent) => any) | null;
+node_modules\typescript\lib\lib.dom.d.ts:2846:    addEventListener<K extends keyof AbstractWorkerEventMap>(type: K, 
+listener: (this: AbstractWorker, ev: AbstractWorkerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): 
+void;
+node_modules\typescript\lib\lib.dom.d.ts:2848:    removeEventListener<K extends keyof AbstractWorkerEventMap>(type: K, 
+listener: (this: AbstractWorker, ev: AbstractWorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): 
+void;
+node_modules\typescript\lib\lib.dom.d.ts:3132:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/cancelAnimationFrame) */
+node_modules\typescript\lib\lib.dom.d.ts:3134:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/requestAnimationFrame) */
+node_modules\typescript\lib\lib.dom.d.ts:4588:     * The **`documentURL`** read-only property of the 
+CSPViolationReportBody interface is a string that represents the URL of the document or worker that violated the 
+Content Security Policy (CSP).
+node_modules\typescript\lib\lib.dom.d.ts:4630:     * The **`statusCode`** read-only property of the 
+CSPViolationReportBody interface is a number representing the HTTP status code of the response to the request that 
+triggered a Content Security Policy (CSP) violation (when loading a window or worker).
+node_modules\typescript\lib\lib.dom.d.ts:7524:     * The **`has()`** method of the CacheStorage interface returns a 
+Promise that resolves to `true` if a You can access `CacheStorage` through the Window.caches property in windows or 
+through the WorkerGlobalScope.caches property in workers.
+node_modules\typescript\lib\lib.dom.d.ts:8260: * The **`CookieStore`** interface of the Cookie Store API provides 
+methods for getting and setting cookies asynchronously from either a page or a service worker.
+node_modules\typescript\lib\lib.dom.d.ts:8308: * The **`CookieStoreManager`** interface of the Cookie Store API allows 
+service workers to subscribe to cookie change events.
+node_modules\typescript\lib\lib.dom.d.ts:8315:     * The **`getSubscriptions()`** method of the CookieStoreManager 
+interface returns a list of all the cookie change subscriptions for this ServiceWorkerRegistration.
+node_modules\typescript\lib\lib.dom.d.ts:8321:     * The **`subscribe()`** method of the CookieStoreManager interface 
+subscribes a ServiceWorkerRegistration to cookie change events.
+node_modules\typescript\lib\lib.dom.d.ts:8327:     * The **`unsubscribe()`** method of the CookieStoreManager 
+interface stops the ServiceWorkerRegistration from receiving previously subscribed events.
+node_modules\typescript\lib\lib.dom.d.ts:13423:     * The **`HTMLCanvasElement.transferControlToOffscreen()`** method 
+transfers control to an OffscreenCanvas object, either on the main thread or on a worker.
+node_modules\typescript\lib\lib.dom.d.ts:20468:     * The **`canConstructInDedicatedWorker`** static property of the 
+MediaSource interface returns `true` if `MediaSource` worker support is implemented, providing a low-latency feature 
+detection mechanism.
+node_modules\typescript\lib\lib.dom.d.ts:20470:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/MediaSource/canConstructInDedicatedWorker_static)
+node_modules\typescript\lib\lib.dom.d.ts:20472:    readonly canConstructInDedicatedWorker: boolean;
+node_modules\typescript\lib\lib.dom.d.ts:20482: * The **`MediaSourceHandle`** interface of the Media Source Extensions 
+API is a proxy for a MediaSource that can be transferred from a dedicated worker back to the main thread and attached 
+to a media element via its HTMLMediaElement.srcObject property.
+node_modules\typescript\lib\lib.dom.d.ts:20816:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/message_event) */
+node_modules\typescript\lib\lib.dom.d.ts:20818:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event) */
+node_modules\typescript\lib\lib.dom.d.ts:21327: * The **`NavigationPreloadManager`** interface of the Service Worker 
+API provides methods for managing the preloading of resources in parallel with service worker bootup.
+node_modules\typescript\lib\lib.dom.d.ts:21334:     * The **`disable()`** method of the NavigationPreloadManager 
+interface halts the automatic preloading of service-worker-managed resources previously started using 
+NavigationPreloadManager.enable() It returns a promise that resolves with `undefined`.
+node_modules\typescript\lib\lib.dom.d.ts:21340:     * The **`enable()`** method of the NavigationPreloadManager 
+interface is used to enable preloading of resources managed by the service worker.
+node_modules\typescript\lib\lib.dom.d.ts:21346:     * The **`getState()`** method of the NavigationPreloadManager 
+interface returns a Promise that resolves to an object with properties that indicate whether preload is enabled and 
+what value will be sent in the Service-Worker-Navigation-Preload HTTP header.
+node_modules\typescript\lib\lib.dom.d.ts:21352:     * The **`setHeaderValue()`** method of the 
+NavigationPreloadManager interface sets the value of the Service-Worker-Navigation-Preload header that will be sent 
+with requests resulting from a Window/fetch operation made during service worker navigation preloading.
+node_modules\typescript\lib\lib.dom.d.ts:21430:     * The **`serviceWorker`** read-only property of the Navigator 
+interface returns the ServiceWorkerContainer object for the associated document, which provides access to 
+registration, removal, upgrade, and communication with the ServiceWorker.
+node_modules\typescript\lib\lib.dom.d.ts:21433:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/Navigator/serviceWorker)
+node_modules\typescript\lib\lib.dom.d.ts:21435:    readonly serviceWorker: ServiceWorkerContainer;
+node_modules\typescript\lib\lib.dom.d.ts:23610:     * The **`workerStart`** read-only property of the 
+PerformanceResourceTiming interface returns a The `workerStart` property can have the following values: - A 
+DOMHighResTimeStamp.
+node_modules\typescript\lib\lib.dom.d.ts:23612:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/PerformanceResourceTiming/workerStart)
+node_modules\typescript\lib\lib.dom.d.ts:23614:    readonly workerStart: DOMHighResTimeStamp;
+node_modules\typescript\lib\lib.dom.d.ts:25256:     * The **`transform`** property of the RTCRtpReceiver object is 
+used to insert a transform stream (TransformStream) running in a worker thread into the receiver pipeline.
+node_modules\typescript\lib\lib.dom.d.ts:25305: * The **`RTCRtpScriptTransform`** interface of the WebRTC API is used 
+to insert a WebRTC Encoded Transform (a TransformStream running in a worker thread) into the WebRTC sender and 
+receiver pipelines.
+node_modules\typescript\lib\lib.dom.d.ts:25314:    new(worker: Worker, options?: any, transfer?: any[]): 
+RTCRtpScriptTransform;
+node_modules\typescript\lib\lib.dom.d.ts:25336:     * The **`transform`** property of the RTCRtpSender object is used 
+to insert a transform stream (TransformStream) running in a worker thread into the sender pipeline.
+node_modules\typescript\lib\lib.dom.d.ts:30278: * The **`SecurityPolicyViolationEvent`** interface inherits from 
+Event, and represents the event object of a `securitypolicyviolation` event sent on an 
+Element/securitypolicyviolation_event, Document/securitypolicyviolation_event, or 
+WorkerGlobalScope/securitypolicyviolation_event when its Content Security Policy (CSP) is violated.
+node_modules\typescript\lib\lib.dom.d.ts:30290:     * The **`columnNumber`** read-only property of the 
+SecurityPolicyViolationEvent interface is the column number in the document or worker script at which the Content 
+Security Policy (CSP) violation occurred.
+node_modules\typescript\lib\lib.dom.d.ts:30302:     * The **`documentURI`** read-only property of the 
+SecurityPolicyViolationEvent interface is a string representing the URI of the document or worker in which the Content 
+Security Policy (CSP) violation occurred.
+node_modules\typescript\lib\lib.dom.d.ts:30314:     * The **`lineNumber`** read-only property of the 
+SecurityPolicyViolationEvent interface is the line number in the document or worker script at which the Content 
+Security Policy (CSP) violation occurred.
+node_modules\typescript\lib\lib.dom.d.ts:30344:     * The **`statusCode`** read-only property of the 
+SecurityPolicyViolationEvent interface is a number representing the HTTP status code of the window or worker in which 
+the Content Security Policy (CSP) violation occurred.
+node_modules\typescript\lib\lib.dom.d.ts:30520:interface ServiceWorkerEventMap extends AbstractWorkerEventMap {
+node_modules\typescript\lib\lib.dom.d.ts:30525: * The **`ServiceWorker`** interface of the Service Worker API provides 
+a reference to a service worker.
+node_modules\typescript\lib\lib.dom.d.ts:30528: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorker)
+node_modules\typescript\lib\lib.dom.d.ts:30530:interface ServiceWorker extends EventTarget, AbstractWorker {
+node_modules\typescript\lib\lib.dom.d.ts:30531:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorker/statechange_event) */
+node_modules\typescript\lib\lib.dom.d.ts:30532:    onstatechange: ((this: ServiceWorker, ev: Event) => any) | null;
+node_modules\typescript\lib\lib.dom.d.ts:30534:     * Returns the `ServiceWorker` serialized script URL defined as 
+part of `ServiceWorkerRegistration`.
+node_modules\typescript\lib\lib.dom.d.ts:30536:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorker/scriptURL)
+node_modules\typescript\lib\lib.dom.d.ts:30540:     * The **`state`** read-only property of the of the service worker.
+node_modules\typescript\lib\lib.dom.d.ts:30542:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorker/state)
+node_modules\typescript\lib\lib.dom.d.ts:30544:    readonly state: ServiceWorkerState;
+node_modules\typescript\lib\lib.dom.d.ts:30546:     * The **`postMessage()`** method of the ServiceWorker interface 
+sends a message to the worker.
+node_modules\typescript\lib\lib.dom.d.ts:30548:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorker/postMessage)
+node_modules\typescript\lib\lib.dom.d.ts:30552:    addEventListener<K extends keyof ServiceWorkerEventMap>(type: K, 
+listener: (this: ServiceWorker, ev: ServiceWorkerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): 
+void;
+node_modules\typescript\lib\lib.dom.d.ts:30554:    removeEventListener<K extends keyof ServiceWorkerEventMap>(type: K, 
+listener: (this: ServiceWorker, ev: ServiceWorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.dom.d.ts:30558:declare var ServiceWorker: {
+node_modules\typescript\lib\lib.dom.d.ts:30559:    prototype: ServiceWorker;
+node_modules\typescript\lib\lib.dom.d.ts:30560:    new(): ServiceWorker;
+node_modules\typescript\lib\lib.dom.d.ts:30563:interface ServiceWorkerContainerEventMap {
+node_modules\typescript\lib\lib.dom.d.ts:30570: * The **`ServiceWorkerContainer`** interface of the Service Worker API 
+provides an object representing the service worker as an overall unit in the network ecosystem, including facilities 
+to register, unregister and update service workers, and access the state of service workers and their registrations.
+node_modules\typescript\lib\lib.dom.d.ts:30573: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer)
+node_modules\typescript\lib\lib.dom.d.ts:30575:interface ServiceWorkerContainer extends EventTarget {
+node_modules\typescript\lib\lib.dom.d.ts:30577:     * The **`controller`** read-only property of the 
+ServiceWorkerContainer interface returns a `activated` (the same object returned by `null` if the request is a force 
+refresh (_Shift_ + refresh) or if there is no active worker.
+node_modules\typescript\lib\lib.dom.d.ts:30579:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/controller)
+node_modules\typescript\lib\lib.dom.d.ts:30581:    readonly controller: ServiceWorker | null;
+node_modules\typescript\lib\lib.dom.d.ts:30582:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/controllerchange_event) */
+node_modules\typescript\lib\lib.dom.d.ts:30583:    oncontrollerchange: ((this: ServiceWorkerContainer, ev: Event) => 
+any) | null;
+node_modules\typescript\lib\lib.dom.d.ts:30584:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/message_event) */
+node_modules\typescript\lib\lib.dom.d.ts:30585:    onmessage: ((this: ServiceWorkerContainer, ev: MessageEvent) => 
+any) | null;
+node_modules\typescript\lib\lib.dom.d.ts:30586:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/messageerror_event) */
+node_modules\typescript\lib\lib.dom.d.ts:30587:    onmessageerror: ((this: ServiceWorkerContainer, ev: MessageEvent) 
+=> any) | null;
+node_modules\typescript\lib\lib.dom.d.ts:30589:     * The **`ready`** read-only property of the ServiceWorkerContainer 
+interface provides a way of delaying code execution until a service worker is active.
+node_modules\typescript\lib\lib.dom.d.ts:30591:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/ready)
+node_modules\typescript\lib\lib.dom.d.ts:30593:    readonly ready: Promise<ServiceWorkerRegistration>;
+node_modules\typescript\lib\lib.dom.d.ts:30597:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/getRegistration)
+node_modules\typescript\lib\lib.dom.d.ts:30599:    getRegistration(clientURL?: string | URL): 
+Promise<ServiceWorkerRegistration | undefined>;
+node_modules\typescript\lib\lib.dom.d.ts:30601:     * The **`getRegistrations()`** method of the 
+`ServiceWorkerContainer`, in an array.
+node_modules\typescript\lib\lib.dom.d.ts:30603:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/getRegistrations)
+node_modules\typescript\lib\lib.dom.d.ts:30605:    getRegistrations(): 
+Promise<ReadonlyArray<ServiceWorkerRegistration>>;
+node_modules\typescript\lib\lib.dom.d.ts:30607:     * The **`register()`** method of the ServiceWorkerContainer 
+interface creates or updates a ServiceWorkerRegistration for the given scope.
+node_modules\typescript\lib\lib.dom.d.ts:30609:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/register)
+node_modules\typescript\lib\lib.dom.d.ts:30611:    register(scriptURL: string | URL, options?: RegistrationOptions): 
+Promise<ServiceWorkerRegistration>;
+node_modules\typescript\lib\lib.dom.d.ts:30613:     * The **`startMessages()`** method of the ServiceWorkerContainer 
+interface explicitly starts the flow of messages being dispatched from a service worker to pages under its control 
+(e.g., sent via Client.postMessage()).
+node_modules\typescript\lib\lib.dom.d.ts:30615:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/startMessages)
+node_modules\typescript\lib\lib.dom.d.ts:30618:    addEventListener<K extends keyof 
+ServiceWorkerContainerEventMap>(type: K, listener: (this: ServiceWorkerContainer, ev: 
+ServiceWorkerContainerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+node_modules\typescript\lib\lib.dom.d.ts:30620:    removeEventListener<K extends keyof 
+ServiceWorkerContainerEventMap>(type: K, listener: (this: ServiceWorkerContainer, ev: 
+ServiceWorkerContainerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.dom.d.ts:30624:declare var ServiceWorkerContainer: {
+node_modules\typescript\lib\lib.dom.d.ts:30625:    prototype: ServiceWorkerContainer;
+node_modules\typescript\lib\lib.dom.d.ts:30626:    new(): ServiceWorkerContainer;
+node_modules\typescript\lib\lib.dom.d.ts:30629:interface ServiceWorkerRegistrationEventMap {
+node_modules\typescript\lib\lib.dom.d.ts:30634: * The **`ServiceWorkerRegistration`** interface of the Service Worker 
+API represents the service worker registration.
+node_modules\typescript\lib\lib.dom.d.ts:30637: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration)
+node_modules\typescript\lib\lib.dom.d.ts:30639:interface ServiceWorkerRegistration extends EventTarget {
+node_modules\typescript\lib\lib.dom.d.ts:30643:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/active)
+node_modules\typescript\lib\lib.dom.d.ts:30645:    readonly active: ServiceWorker | null;
+node_modules\typescript\lib\lib.dom.d.ts:30647:     * The **`cookies`** read-only property of the 
+ServiceWorkerRegistration interface returns a reference to the CookieStoreManager interface, which enables a web app 
+to subscribe to and unsubscribe from cookie change events in a service worker.
+node_modules\typescript\lib\lib.dom.d.ts:30649:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/cookies)
+node_modules\typescript\lib\lib.dom.d.ts:30655:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/installing)
+node_modules\typescript\lib\lib.dom.d.ts:30657:    readonly installing: ServiceWorker | null;
+node_modules\typescript\lib\lib.dom.d.ts:30659:     * The **`navigationPreload`** read-only property of the 
+ServiceWorkerRegistration interface returns the NavigationPreloadManager associated with the current service worker 
+registration.
+node_modules\typescript\lib\lib.dom.d.ts:30661:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/navigationPreload)
+node_modules\typescript\lib\lib.dom.d.ts:30664:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/updatefound_event) */
+node_modules\typescript\lib\lib.dom.d.ts:30665:    onupdatefound: ((this: ServiceWorkerRegistration, ev: Event) => 
+any) | null;
+node_modules\typescript\lib\lib.dom.d.ts:30669:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/pushManager)
+node_modules\typescript\lib\lib.dom.d.ts:30673:     * The **`scope`** read-only property of the 
+ServiceWorkerRegistration interface returns a string representing a URL that defines a service worker's registration 
+scope; that is, the range of URLs a service worker can control.
+node_modules\typescript\lib\lib.dom.d.ts:30675:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/scope)
+node_modules\typescript\lib\lib.dom.d.ts:30679:     * The **`updateViaCache`** read-only property of the 
+ServiceWorkerRegistration interface returns the value of the setting used to determine the circumstances in which the 
+browser will consult the HTTP cache when it tries to update the service worker or any scripts that are imported via 
+WorkerGlobalScope.importScripts.
+node_modules\typescript\lib\lib.dom.d.ts:30681:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/updateViaCache)
+node_modules\typescript\lib\lib.dom.d.ts:30683:    readonly updateViaCache: ServiceWorkerUpdateViaCache;
+node_modules\typescript\lib\lib.dom.d.ts:30687:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/waiting)
+node_modules\typescript\lib\lib.dom.d.ts:30689:    readonly waiting: ServiceWorker | null;
+node_modules\typescript\lib\lib.dom.d.ts:30691:     * The **`getNotifications()`** method of the 
+ServiceWorkerRegistration interface returns a list of the notifications in the order that they were created from the 
+current origin via the current service worker registration.
+node_modules\typescript\lib\lib.dom.d.ts:30693:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/getNotifications)
+node_modules\typescript\lib\lib.dom.d.ts:30697:     * The **`showNotification()`** method of the service worker.
+node_modules\typescript\lib\lib.dom.d.ts:30699:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification)
+node_modules\typescript\lib\lib.dom.d.ts:30705:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/unregister)
+node_modules\typescript\lib\lib.dom.d.ts:30709:     * The **`update()`** method of the worker.
+node_modules\typescript\lib\lib.dom.d.ts:30711:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/update)
+node_modules\typescript\lib\lib.dom.d.ts:30713:    update(): Promise<ServiceWorkerRegistration>;
+node_modules\typescript\lib\lib.dom.d.ts:30714:    addEventListener<K extends keyof 
+ServiceWorkerRegistrationEventMap>(type: K, listener: (this: ServiceWorkerRegistration, ev: 
+ServiceWorkerRegistrationEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+node_modules\typescript\lib\lib.dom.d.ts:30716:    removeEventListener<K extends keyof 
+ServiceWorkerRegistrationEventMap>(type: K, listener: (this: ServiceWorkerRegistration, ev: 
+ServiceWorkerRegistrationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.dom.d.ts:30720:declare var ServiceWorkerRegistration: {
+node_modules\typescript\lib\lib.dom.d.ts:30721:    prototype: ServiceWorkerRegistration;
+node_modules\typescript\lib\lib.dom.d.ts:30722:    new(): ServiceWorkerRegistration;
+node_modules\typescript\lib\lib.dom.d.ts:30802: * The **`SharedWorker`** interface represents a specific kind of 
+worker that can be _accessed_ from several browsing contexts, such as several windows, iframes or even workers.
+node_modules\typescript\lib\lib.dom.d.ts:30804: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/SharedWorker)
+node_modules\typescript\lib\lib.dom.d.ts:30806:interface SharedWorker extends EventTarget, AbstractWorker {
+node_modules\typescript\lib\lib.dom.d.ts:30808:     * The **`port`** property of the SharedWorker interface returns a 
+MessagePort object used to communicate and control the shared worker.
+node_modules\typescript\lib\lib.dom.d.ts:30810:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/SharedWorker/port)
+node_modules\typescript\lib\lib.dom.d.ts:30813:    addEventListener<K extends keyof AbstractWorkerEventMap>(type: K, 
+listener: (this: SharedWorker, ev: AbstractWorkerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): 
+void;
+node_modules\typescript\lib\lib.dom.d.ts:30815:    removeEventListener<K extends keyof AbstractWorkerEventMap>(type: 
+K, listener: (this: SharedWorker, ev: AbstractWorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): 
+void;
+node_modules\typescript\lib\lib.dom.d.ts:30819:declare var SharedWorker: {
+node_modules\typescript\lib\lib.dom.d.ts:30820:    prototype: SharedWorker;
+node_modules\typescript\lib\lib.dom.d.ts:30821:    new(scriptURL: string | URL, options?: string | WorkerOptions): 
+SharedWorker;
+node_modules\typescript\lib\lib.dom.d.ts:36358:interface Window extends EventTarget, AnimationFrameProvider, 
+GlobalEventHandlers, WindowEventHandlers, WindowLocalStorage, WindowOrWorkerGlobalScope, WindowSessionStorage {
+node_modules\typescript\lib\lib.dom.d.ts:36886:interface WindowOrWorkerGlobalScope {
+node_modules\typescript\lib\lib.dom.d.ts:36935:interface WorkerEventMap extends AbstractWorkerEventMap, 
+MessageEventTargetEventMap {
+node_modules\typescript\lib\lib.dom.d.ts:36939: * The **`Worker`** interface of the Web Workers API represents a 
+background task that can be created via script, which can send messages back to its creator.
+node_modules\typescript\lib\lib.dom.d.ts:36941: * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Worker)
+node_modules\typescript\lib\lib.dom.d.ts:36943:interface Worker extends EventTarget, AbstractWorker, 
+MessageEventTarget<Worker> {
+node_modules\typescript\lib\lib.dom.d.ts:36945:     * The **`postMessage()`** method of the Worker interface sends a 
+message to the worker.
+node_modules\typescript\lib\lib.dom.d.ts:36947:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/Worker/postMessage)
+node_modules\typescript\lib\lib.dom.d.ts:36952:     * The **`terminate()`** method of the Worker interface immediately 
+terminates the Worker.
+node_modules\typescript\lib\lib.dom.d.ts:36954:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/Worker/terminate)
+node_modules\typescript\lib\lib.dom.d.ts:36957:    addEventListener<K extends keyof WorkerEventMap>(type: K, listener: 
+(this: Worker, ev: WorkerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+node_modules\typescript\lib\lib.dom.d.ts:36959:    removeEventListener<K extends keyof WorkerEventMap>(type: K, 
+listener: (this: Worker, ev: WorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.dom.d.ts:36963:declare var Worker: {
+node_modules\typescript\lib\lib.dom.d.ts:36964:    prototype: Worker;
+node_modules\typescript\lib\lib.dom.d.ts:36965:    new(scriptURL: string | URL, options?: WorkerOptions): Worker;
+node_modules\typescript\lib\lib.dom.d.ts:36969: * The **`Worklet`** interface is a lightweight version of Web Workers 
+and gives developers access to low-level parts of the rendering pipeline.
+node_modules\typescript\lib\lib.dom.d.ts:38838:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/cancelAnimationFrame) */
+node_modules\typescript\lib\lib.dom.d.ts:38840:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/requestAnimationFrame) */
+node_modules\typescript\lib\lib.dom.d.ts:39211:type MessageEventSource = WindowProxy | MessagePort | ServiceWorker;
+node_modules\typescript\lib\lib.dom.d.ts:39274:type ClientTypes = "all" | "sharedworker" | "window" | "worker";
+node_modules\typescript\lib\lib.dom.d.ts:39393:type RequestDestination = "" | "audio" | "audioworklet" | "document" | 
+"embed" | "font" | "frame" | "iframe" | "image" | "manifest" | "object" | "paintworklet" | "report" | "script" | 
+"sharedworker" | "style" | "track" | "video" | "worker" | "xslt";
+node_modules\typescript\lib\lib.dom.d.ts:39407:type ServiceWorkerState = "activated" | "activating" | "installed" | 
+"installing" | "parsed" | "redundant";
+node_modules\typescript\lib\lib.dom.d.ts:39408:type ServiceWorkerUpdateViaCache = "all" | "imports" | "none";
+node_modules\typescript\lib\lib.dom.d.ts:39427:type WorkerType = "classic" | "module";
+node_modules\typescript\lib\lib.dom.iterable.d.ts:104:     * The **`subscribe()`** method of the CookieStoreManager 
+interface subscribes a ServiceWorkerRegistration to cookie change events.
+node_modules\typescript\lib\lib.dom.iterable.d.ts:110:     * The **`unsubscribe()`** method of the CookieStoreManager 
+interface stops the ServiceWorkerRegistration from receiving previously subscribed events.
+node_modules\typescript\lib\lib.es2016.full.d.ts:21:/// <reference lib="webworker.importscripts" />
+node_modules\typescript\lib\lib.es2017.full.d.ts:21:/// <reference lib="webworker.importscripts" />
+node_modules\typescript\lib\lib.es2018.full.d.ts:21:/// <reference lib="webworker.importscripts" />
+node_modules\typescript\lib\lib.es2019.full.d.ts:21:/// <reference lib="webworker.importscripts" />
+node_modules\typescript\lib\lib.es2020.full.d.ts:21:/// <reference lib="webworker.importscripts" />
+node_modules\typescript\lib\lib.es2021.full.d.ts:21:/// <reference lib="webworker.importscripts" />
+node_modules\typescript\lib\lib.es2022.full.d.ts:21:/// <reference lib="webworker.importscripts" />
+node_modules\typescript\lib\lib.es2023.full.d.ts:21:/// <reference lib="webworker.importscripts" />
+node_modules\typescript\lib\lib.es2024.full.d.ts:21:/// <reference lib="webworker.importscripts" />
+node_modules\typescript\lib\lib.es6.d.ts:22:/// <reference lib="webworker.importscripts" />
+node_modules\typescript\lib\lib.esnext.full.d.ts:21:/// <reference lib="webworker.importscripts" />
+node_modules\typescript\lib\lib.webworker.asynciterable.d.ts:20:/// Worker Async Iterable APIs
+node_modules\typescript\lib\lib.webworker.d.ts:20:/// Worker APIs
+node_modules\typescript\lib\lib.webworker.d.ts:322:    source?: Client | ServiceWorker | MessagePort | null;
+node_modules\typescript\lib\lib.webworker.d.ts:731:    type?: WorkerType;
+node_modules\typescript\lib\lib.webworker.d.ts:732:    updateViaCache?: ServiceWorkerUpdateViaCache;
+node_modules\typescript\lib\lib.webworker.d.ts:1056:interface WorkerOptions {
+node_modules\typescript\lib\lib.webworker.d.ts:1059:    type?: WorkerType;
+node_modules\typescript\lib\lib.webworker.d.ts:1180:interface AbstractWorkerEventMap {
+node_modules\typescript\lib\lib.webworker.d.ts:1184:interface AbstractWorker {
+node_modules\typescript\lib\lib.webworker.d.ts:1185:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorker/error_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:1186:    onerror: ((this: AbstractWorker, ev: ErrorEvent) => any) | 
+null;
+node_modules\typescript\lib\lib.webworker.d.ts:1187:    addEventListener<K extends keyof AbstractWorkerEventMap>(type: 
+K, listener: (this: AbstractWorker, ev: AbstractWorkerEventMap[K]) => any, options?: boolean | 
+AddEventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:1189:    removeEventListener<K extends keyof 
+AbstractWorkerEventMap>(type: K, listener: (this: AbstractWorker, ev: AbstractWorkerEventMap[K]) => any, options?: 
+boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:1194:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/cancelAnimationFrame) */
+node_modules\typescript\lib\lib.webworker.d.ts:1196:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/requestAnimationFrame) */
+node_modules\typescript\lib\lib.webworker.d.ts:2241:     * The **`has()`** method of the CacheStorage interface 
+returns a Promise that resolves to `true` if a You can access `CacheStorage` through the Window.caches property in 
+windows or through the WorkerGlobalScope.caches property in workers.
+node_modules\typescript\lib\lib.webworker.d.ts:2503: * The `Client` interface represents an executable context such as 
+a Worker, or a SharedWorker.
+node_modules\typescript\lib\lib.webworker.d.ts:2521:     * The **`type`** read-only property of the Client interface 
+indicates the type of client the service worker is controlling.
+node_modules\typescript\lib\lib.webworker.d.ts:2527:     * The **`url`** read-only property of the Client interface 
+returns the URL of the current service worker client.
+node_modules\typescript\lib\lib.webworker.d.ts:2533:     * The **`postMessage()`** method of the (a Window, Worker, or 
+SharedWorker).
+node_modules\typescript\lib\lib.webworker.d.ts:2553:     * The **`claim()`** method of the Clients interface allows an 
+active service worker to set itself as the ServiceWorkerContainer.controller for all clients within its 
+ServiceWorkerRegistration.scope.
+node_modules\typescript\lib\lib.webworker.d.ts:2565:     * The **`matchAll()`** method of the Clients interface 
+returns a Promise for a list of service worker clients whose origin is the same as the associated service worker's 
+origin.
+node_modules\typescript\lib\lib.webworker.d.ts:2630: * The **`CookieStore`** interface of the Cookie Store API 
+provides methods for getting and setting cookies asynchronously from either a page or a service worker.
+node_modules\typescript\lib\lib.webworker.d.ts:2672: * The **`CookieStoreManager`** interface of the Cookie Store API 
+allows service workers to subscribe to cookie change events.
+node_modules\typescript\lib\lib.webworker.d.ts:2679:     * The **`getSubscriptions()`** method of the 
+CookieStoreManager interface returns a list of all the cookie change subscriptions for this ServiceWorkerRegistration.
+node_modules\typescript\lib\lib.webworker.d.ts:2685:     * The **`subscribe()`** method of the CookieStoreManager 
+interface subscribes a ServiceWorkerRegistration to cookie change events.
+node_modules\typescript\lib\lib.webworker.d.ts:2691:     * The **`unsubscribe()`** method of the CookieStoreManager 
+interface stops the ServiceWorkerRegistration from receiving previously subscribed events.
+node_modules\typescript\lib\lib.webworker.d.ts:3511:interface DedicatedWorkerGlobalScopeEventMap extends 
+WorkerGlobalScopeEventMap, MessageEventTargetEventMap {
+node_modules\typescript\lib\lib.webworker.d.ts:3518: * The **`DedicatedWorkerGlobalScope`** object (the Worker global 
+scope) is accessible through the WorkerGlobalScope.self keyword.
+node_modules\typescript\lib\lib.webworker.d.ts:3520: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope)
+node_modules\typescript\lib\lib.webworker.d.ts:3522:interface DedicatedWorkerGlobalScope extends WorkerGlobalScope, 
+AnimationFrameProvider, MessageEventTarget<DedicatedWorkerGlobalScope> {
+node_modules\typescript\lib\lib.webworker.d.ts:3524:     * The **`name`** read-only property of the the Worker.Worker 
+constructor can pass to get a reference to the DedicatedWorkerGlobalScope.
+node_modules\typescript\lib\lib.webworker.d.ts:3526:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/name)
+node_modules\typescript\lib\lib.webworker.d.ts:3529:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/rtctransform_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:3530:    onrtctransform: ((this: DedicatedWorkerGlobalScope, ev: 
+RTCTransformEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:3532:     * The **`close()`** method of the DedicatedWorkerGlobalScope 
+interface discards any tasks queued in the `DedicatedWorkerGlobalScope`'s event loop, effectively closing this 
+particular scope.
+node_modules\typescript\lib\lib.webworker.d.ts:3534:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/close)
+node_modules\typescript\lib\lib.webworker.d.ts:3538:     * The **`postMessage()`** method of the 
+DedicatedWorkerGlobalScope interface sends a message to the main thread that spawned it.
+node_modules\typescript\lib\lib.webworker.d.ts:3540:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/postMessage)
+node_modules\typescript\lib\lib.webworker.d.ts:3544:    addEventListener<K extends keyof 
+DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: 
+DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:3546:    removeEventListener<K extends keyof 
+DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: 
+DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:3550:declare var DedicatedWorkerGlobalScope: {
+node_modules\typescript\lib\lib.webworker.d.ts:3551:    prototype: DedicatedWorkerGlobalScope;
+node_modules\typescript\lib\lib.webworker.d.ts:3552:    new(): DedicatedWorkerGlobalScope;
+node_modules\typescript\lib\lib.webworker.d.ts:4034: * The **`ExtendableCookieChangeEvent`** interface of the Cookie 
+Store API is the event type passed to ServiceWorkerGlobalScope/cookiechange_event event fired at the 
+ServiceWorkerGlobalScope when any cookie changes occur which match the service worker's cookie change subscription 
+list.
+node_modules\typescript\lib\lib.webworker.d.ts:4059: * The **`ExtendableEvent`** interface extends the lifetime of the 
+`install` and `activate` events dispatched on the global scope as part of the service worker lifecycle.
+node_modules\typescript\lib\lib.webworker.d.ts:4078: * The **`ExtendableMessageEvent`** interface of the Service 
+Worker API represents the event object of a ServiceWorkerGlobalScope/message_event event fired on a service worker 
+(when a message is received on the ServiceWorkerGlobalScope from another context) - extends the lifetime of such 
+events.
+node_modules\typescript\lib\lib.webworker.d.ts:4108:     * The **`source`** read-only property of the A Client, 
+ServiceWorker or MessagePort object.
+node_modules\typescript\lib\lib.webworker.d.ts:4112:    readonly source: Client | ServiceWorker | MessagePort | null;
+node_modules\typescript\lib\lib.webworker.d.ts:4121: * This is the event type for `fetch` events dispatched on the 
+ServiceWorkerGlobalScope.
+node_modules\typescript\lib\lib.webworker.d.ts:4127:     * The **`clientId`** read-only property of the current 
+service worker is controlling.
+node_modules\typescript\lib\lib.webworker.d.ts:5820: * The **`MediaSourceHandle`** interface of the Media Source 
+Extensions API is a proxy for a MediaSource that can be transferred from a dedicated worker back to the main thread 
+and attached to a media element via its HTMLMediaElement.srcObject property.
+node_modules\typescript\lib\lib.webworker.d.ts:5927:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/message_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:5929:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:5979: * The **`NavigationPreloadManager`** interface of the Service 
+Worker API provides methods for managing the preloading of resources in parallel with service worker bootup.
+node_modules\typescript\lib\lib.webworker.d.ts:5986:     * The **`disable()`** method of the NavigationPreloadManager 
+interface halts the automatic preloading of service-worker-managed resources previously started using 
+NavigationPreloadManager.enable() It returns a promise that resolves with `undefined`.
+node_modules\typescript\lib\lib.webworker.d.ts:5992:     * The **`enable()`** method of the NavigationPreloadManager 
+interface is used to enable preloading of resources managed by the service worker.
+node_modules\typescript\lib\lib.webworker.d.ts:5998:     * The **`getState()`** method of the NavigationPreloadManager 
+interface returns a Promise that resolves to an object with properties that indicate whether preload is enabled and 
+what value will be sent in the Service-Worker-Navigation-Preload HTTP header.
+node_modules\typescript\lib\lib.webworker.d.ts:6004:     * The **`setHeaderValue()`** method of the 
+NavigationPreloadManager interface sets the value of the Service-Worker-Navigation-Preload header that will be sent 
+with requests resulting from a Window/fetch operation made during service worker navigation preloading.
+node_modules\typescript\lib\lib.webworker.d.ts:6193: * The **`NotificationEvent`** interface of the Notifications API 
+represents a notification event dispatched on the ServiceWorkerGlobalScope of a ServiceWorker.
+node_modules\typescript\lib\lib.webworker.d.ts:6829:     * The **`workerStart`** read-only property of the 
+PerformanceResourceTiming interface returns a The `workerStart` property can have the following values: - A 
+DOMHighResTimeStamp.
+node_modules\typescript\lib\lib.webworker.d.ts:6831:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/PerformanceResourceTiming/workerStart)
+node_modules\typescript\lib\lib.webworker.d.ts:6833:    readonly workerStart: DOMHighResTimeStamp;
+node_modules\typescript\lib\lib.webworker.d.ts:7364: * The **`RTCRtpScriptTransformer`** interface of the WebRTC API 
+provides a worker-side Stream API interface that a WebRTC Encoded Transform can use to modify encoded media frames in 
+the incoming and outgoing WebRTC pipelines.
+node_modules\typescript\lib\lib.webworker.d.ts:7407: * The **`RTCTransformEvent`** of the WebRTC API represent an 
+event that is fired in a dedicated worker when an encoded frame has been queued for processing by a WebRTC Encoded 
+Transform.
+node_modules\typescript\lib\lib.webworker.d.ts:7905: * The **`SecurityPolicyViolationEvent`** interface inherits from 
+Event, and represents the event object of a `securitypolicyviolation` event sent on an 
+Element/securitypolicyviolation_event, Document/securitypolicyviolation_event, or 
+WorkerGlobalScope/securitypolicyviolation_event when its Content Security Policy (CSP) is violated.
+node_modules\typescript\lib\lib.webworker.d.ts:7917:     * The **`columnNumber`** read-only property of the 
+SecurityPolicyViolationEvent interface is the column number in the document or worker script at which the Content 
+Security Policy (CSP) violation occurred.
+node_modules\typescript\lib\lib.webworker.d.ts:7929:     * The **`documentURI`** read-only property of the 
+SecurityPolicyViolationEvent interface is a string representing the URI of the document or worker in which the Content 
+Security Policy (CSP) violation occurred.
+node_modules\typescript\lib\lib.webworker.d.ts:7941:     * The **`lineNumber`** read-only property of the 
+SecurityPolicyViolationEvent interface is the line number in the document or worker script at which the Content 
+Security Policy (CSP) violation occurred.
+node_modules\typescript\lib\lib.webworker.d.ts:7971:     * The **`statusCode`** read-only property of the 
+SecurityPolicyViolationEvent interface is a number representing the HTTP status code of the window or worker in which 
+the Content Security Policy (CSP) violation occurred.
+node_modules\typescript\lib\lib.webworker.d.ts:7989:interface ServiceWorkerEventMap extends AbstractWorkerEventMap {
+node_modules\typescript\lib\lib.webworker.d.ts:7994: * The **`ServiceWorker`** interface of the Service Worker API 
+provides a reference to a service worker.
+node_modules\typescript\lib\lib.webworker.d.ts:7997: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorker)
+node_modules\typescript\lib\lib.webworker.d.ts:7999:interface ServiceWorker extends EventTarget, AbstractWorker {
+node_modules\typescript\lib\lib.webworker.d.ts:8000:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorker/statechange_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8001:    onstatechange: ((this: ServiceWorker, ev: Event) => any) | 
+null;
+node_modules\typescript\lib\lib.webworker.d.ts:8003:     * Returns the `ServiceWorker` serialized script URL defined 
+as part of `ServiceWorkerRegistration`.
+node_modules\typescript\lib\lib.webworker.d.ts:8005:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorker/scriptURL)
+node_modules\typescript\lib\lib.webworker.d.ts:8009:     * The **`state`** read-only property of the of the service 
+worker.
+node_modules\typescript\lib\lib.webworker.d.ts:8011:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorker/state)
+node_modules\typescript\lib\lib.webworker.d.ts:8013:    readonly state: ServiceWorkerState;
+node_modules\typescript\lib\lib.webworker.d.ts:8015:     * The **`postMessage()`** method of the ServiceWorker 
+interface sends a message to the worker.
+node_modules\typescript\lib\lib.webworker.d.ts:8017:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorker/postMessage)
+node_modules\typescript\lib\lib.webworker.d.ts:8021:    addEventListener<K extends keyof ServiceWorkerEventMap>(type: 
+K, listener: (this: ServiceWorker, ev: ServiceWorkerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): 
+void;
+node_modules\typescript\lib\lib.webworker.d.ts:8023:    removeEventListener<K extends keyof 
+ServiceWorkerEventMap>(type: K, listener: (this: ServiceWorker, ev: ServiceWorkerEventMap[K]) => any, options?: 
+boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:8027:declare var ServiceWorker: {
+node_modules\typescript\lib\lib.webworker.d.ts:8028:    prototype: ServiceWorker;
+node_modules\typescript\lib\lib.webworker.d.ts:8029:    new(): ServiceWorker;
+node_modules\typescript\lib\lib.webworker.d.ts:8032:interface ServiceWorkerContainerEventMap {
+node_modules\typescript\lib\lib.webworker.d.ts:8039: * The **`ServiceWorkerContainer`** interface of the Service 
+Worker API provides an object representing the service worker as an overall unit in the network ecosystem, including 
+facilities to register, unregister and update service workers, and access the state of service workers and their 
+registrations.
+node_modules\typescript\lib\lib.webworker.d.ts:8042: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer)
+node_modules\typescript\lib\lib.webworker.d.ts:8044:interface ServiceWorkerContainer extends EventTarget {
+node_modules\typescript\lib\lib.webworker.d.ts:8046:     * The **`controller`** read-only property of the 
+ServiceWorkerContainer interface returns a `activated` (the same object returned by `null` if the request is a force 
+refresh (_Shift_ + refresh) or if there is no active worker.
+node_modules\typescript\lib\lib.webworker.d.ts:8048:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/controller)
+node_modules\typescript\lib\lib.webworker.d.ts:8050:    readonly controller: ServiceWorker | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8051:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/controllerchange_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8052:    oncontrollerchange: ((this: ServiceWorkerContainer, ev: Event) 
+=> any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8053:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/message_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8054:    onmessage: ((this: ServiceWorkerContainer, ev: MessageEvent) 
+=> any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8055:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/messageerror_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8056:    onmessageerror: ((this: ServiceWorkerContainer, ev: 
+MessageEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8058:     * The **`ready`** read-only property of the 
+ServiceWorkerContainer interface provides a way of delaying code execution until a service worker is active.
+node_modules\typescript\lib\lib.webworker.d.ts:8060:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/ready)
+node_modules\typescript\lib\lib.webworker.d.ts:8062:    readonly ready: Promise<ServiceWorkerRegistration>;
+node_modules\typescript\lib\lib.webworker.d.ts:8066:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/getRegistration)
+node_modules\typescript\lib\lib.webworker.d.ts:8068:    getRegistration(clientURL?: string | URL): 
+Promise<ServiceWorkerRegistration | undefined>;
+node_modules\typescript\lib\lib.webworker.d.ts:8070:     * The **`getRegistrations()`** method of the 
+`ServiceWorkerContainer`, in an array.
+node_modules\typescript\lib\lib.webworker.d.ts:8072:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/getRegistrations)
+node_modules\typescript\lib\lib.webworker.d.ts:8074:    getRegistrations(): 
+Promise<ReadonlyArray<ServiceWorkerRegistration>>;
+node_modules\typescript\lib\lib.webworker.d.ts:8076:     * The **`register()`** method of the ServiceWorkerContainer 
+interface creates or updates a ServiceWorkerRegistration for the given scope.
+node_modules\typescript\lib\lib.webworker.d.ts:8078:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/register)
+node_modules\typescript\lib\lib.webworker.d.ts:8080:    register(scriptURL: string | URL, options?: 
+RegistrationOptions): Promise<ServiceWorkerRegistration>;
+node_modules\typescript\lib\lib.webworker.d.ts:8082:     * The **`startMessages()`** method of the 
+ServiceWorkerContainer interface explicitly starts the flow of messages being dispatched from a service worker to 
+pages under its control (e.g., sent via Client.postMessage()).
+node_modules\typescript\lib\lib.webworker.d.ts:8084:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/startMessages)
+node_modules\typescript\lib\lib.webworker.d.ts:8087:    addEventListener<K extends keyof 
+ServiceWorkerContainerEventMap>(type: K, listener: (this: ServiceWorkerContainer, ev: 
+ServiceWorkerContainerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:8089:    removeEventListener<K extends keyof 
+ServiceWorkerContainerEventMap>(type: K, listener: (this: ServiceWorkerContainer, ev: 
+ServiceWorkerContainerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:8093:declare var ServiceWorkerContainer: {
+node_modules\typescript\lib\lib.webworker.d.ts:8094:    prototype: ServiceWorkerContainer;
+node_modules\typescript\lib\lib.webworker.d.ts:8095:    new(): ServiceWorkerContainer;
+node_modules\typescript\lib\lib.webworker.d.ts:8098:interface ServiceWorkerGlobalScopeEventMap extends 
+WorkerGlobalScopeEventMap {
+node_modules\typescript\lib\lib.webworker.d.ts:8112: * The **`ServiceWorkerGlobalScope`** interface of the Service 
+Worker API represents the global execution context of a service worker.
+node_modules\typescript\lib\lib.webworker.d.ts:8115: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope)
+node_modules\typescript\lib\lib.webworker.d.ts:8117:interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
+node_modules\typescript\lib\lib.webworker.d.ts:8119:     * The **`clients`** read-only property of the object 
+associated with the service worker.
+node_modules\typescript\lib\lib.webworker.d.ts:8121:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/clients)
+node_modules\typescript\lib\lib.webworker.d.ts:8125:     * The **`cookieStore`** read-only property of the 
+ServiceWorkerGlobalScope interface returns a reference to the CookieStore object associated with this service worker.
+node_modules\typescript\lib\lib.webworker.d.ts:8127:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/cookieStore)
+node_modules\typescript\lib\lib.webworker.d.ts:8130:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/activate_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8131:    onactivate: ((this: ServiceWorkerGlobalScope, ev: 
+ExtendableEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8132:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/cookiechange_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8133:    oncookiechange: ((this: ServiceWorkerGlobalScope, ev: 
+ExtendableCookieChangeEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8134:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8135:    onfetch: ((this: ServiceWorkerGlobalScope, ev: FetchEvent) => 
+any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8136:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/install_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8137:    oninstall: ((this: ServiceWorkerGlobalScope, ev: 
+ExtendableEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8138:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/message_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8139:    onmessage: ((this: ServiceWorkerGlobalScope, ev: 
+ExtendableMessageEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8140:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/messageerror_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8141:    onmessageerror: ((this: ServiceWorkerGlobalScope, ev: 
+MessageEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8142:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8143:    onnotificationclick: ((this: ServiceWorkerGlobalScope, ev: 
+NotificationEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8144:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/notificationclose_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8145:    onnotificationclose: ((this: ServiceWorkerGlobalScope, ev: 
+NotificationEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8146:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/push_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8147:    onpush: ((this: ServiceWorkerGlobalScope, ev: PushEvent) => 
+any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8148:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8149:    onpushsubscriptionchange: ((this: ServiceWorkerGlobalScope, 
+ev: PushSubscriptionChangeEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8151:     * The **`registration`** read-only property of the 
+ServiceWorkerGlobalScope interface returns a reference to the ServiceWorkerRegistration object, which represents the 
+service worker's registration.
+node_modules\typescript\lib\lib.webworker.d.ts:8153:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/registration)
+node_modules\typescript\lib\lib.webworker.d.ts:8155:    readonly registration: ServiceWorkerRegistration;
+node_modules\typescript\lib\lib.webworker.d.ts:8157:     * The **`serviceWorker`** read-only property of the 
+ServiceWorkerGlobalScope interface returns a reference to the ServiceWorker object, which represents the service 
+worker.
+node_modules\typescript\lib\lib.webworker.d.ts:8159:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/serviceWorker)
+node_modules\typescript\lib\lib.webworker.d.ts:8161:    readonly serviceWorker: ServiceWorker;
+node_modules\typescript\lib\lib.webworker.d.ts:8163:     * The **`skipWaiting()`** method of the 
+ServiceWorkerGlobalScope interface forces the waiting service worker to become the active service worker.
+node_modules\typescript\lib\lib.webworker.d.ts:8165:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting)
+node_modules\typescript\lib\lib.webworker.d.ts:8168:    addEventListener<K extends keyof 
+ServiceWorkerGlobalScopeEventMap>(type: K, listener: (this: ServiceWorkerGlobalScope, ev: 
+ServiceWorkerGlobalScopeEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:8170:    removeEventListener<K extends keyof 
+ServiceWorkerGlobalScopeEventMap>(type: K, listener: (this: ServiceWorkerGlobalScope, ev: 
+ServiceWorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:8174:declare var ServiceWorkerGlobalScope: {
+node_modules\typescript\lib\lib.webworker.d.ts:8175:    prototype: ServiceWorkerGlobalScope;
+node_modules\typescript\lib\lib.webworker.d.ts:8176:    new(): ServiceWorkerGlobalScope;
+node_modules\typescript\lib\lib.webworker.d.ts:8179:interface ServiceWorkerRegistrationEventMap {
+node_modules\typescript\lib\lib.webworker.d.ts:8184: * The **`ServiceWorkerRegistration`** interface of the Service 
+Worker API represents the service worker registration.
+node_modules\typescript\lib\lib.webworker.d.ts:8187: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration)
+node_modules\typescript\lib\lib.webworker.d.ts:8189:interface ServiceWorkerRegistration extends EventTarget {
+node_modules\typescript\lib\lib.webworker.d.ts:8193:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/active)
+node_modules\typescript\lib\lib.webworker.d.ts:8195:    readonly active: ServiceWorker | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8197:     * The **`cookies`** read-only property of the 
+ServiceWorkerRegistration interface returns a reference to the CookieStoreManager interface, which enables a web app 
+to subscribe to and unsubscribe from cookie change events in a service worker.
+node_modules\typescript\lib\lib.webworker.d.ts:8199:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/cookies)
+node_modules\typescript\lib\lib.webworker.d.ts:8205:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/installing)
+node_modules\typescript\lib\lib.webworker.d.ts:8207:    readonly installing: ServiceWorker | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8209:     * The **`navigationPreload`** read-only property of the 
+ServiceWorkerRegistration interface returns the NavigationPreloadManager associated with the current service worker 
+registration.
+node_modules\typescript\lib\lib.webworker.d.ts:8211:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/navigationPreload)
+node_modules\typescript\lib\lib.webworker.d.ts:8214:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/updatefound_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8215:    onupdatefound: ((this: ServiceWorkerRegistration, ev: Event) 
+=> any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8219:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/pushManager)
+node_modules\typescript\lib\lib.webworker.d.ts:8223:     * The **`scope`** read-only property of the 
+ServiceWorkerRegistration interface returns a string representing a URL that defines a service worker's registration 
+scope; that is, the range of URLs a service worker can control.
+node_modules\typescript\lib\lib.webworker.d.ts:8225:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/scope)
+node_modules\typescript\lib\lib.webworker.d.ts:8229:     * The **`updateViaCache`** read-only property of the 
+ServiceWorkerRegistration interface returns the value of the setting used to determine the circumstances in which the 
+browser will consult the HTTP cache when it tries to update the service worker or any scripts that are imported via 
+WorkerGlobalScope.importScripts.
+node_modules\typescript\lib\lib.webworker.d.ts:8231:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/updateViaCache)
+node_modules\typescript\lib\lib.webworker.d.ts:8233:    readonly updateViaCache: ServiceWorkerUpdateViaCache;
+node_modules\typescript\lib\lib.webworker.d.ts:8237:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/waiting)
+node_modules\typescript\lib\lib.webworker.d.ts:8239:    readonly waiting: ServiceWorker | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8241:     * The **`getNotifications()`** method of the 
+ServiceWorkerRegistration interface returns a list of the notifications in the order that they were created from the 
+current origin via the current service worker registration.
+node_modules\typescript\lib\lib.webworker.d.ts:8243:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/getNotifications)
+node_modules\typescript\lib\lib.webworker.d.ts:8247:     * The **`showNotification()`** method of the service worker.
+node_modules\typescript\lib\lib.webworker.d.ts:8249:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/showNotification)
+node_modules\typescript\lib\lib.webworker.d.ts:8255:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/unregister)
+node_modules\typescript\lib\lib.webworker.d.ts:8259:     * The **`update()`** method of the worker.
+node_modules\typescript\lib\lib.webworker.d.ts:8261:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/update)
+node_modules\typescript\lib\lib.webworker.d.ts:8263:    update(): Promise<ServiceWorkerRegistration>;
+node_modules\typescript\lib\lib.webworker.d.ts:8264:    addEventListener<K extends keyof 
+ServiceWorkerRegistrationEventMap>(type: K, listener: (this: ServiceWorkerRegistration, ev: 
+ServiceWorkerRegistrationEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:8266:    removeEventListener<K extends keyof 
+ServiceWorkerRegistrationEventMap>(type: K, listener: (this: ServiceWorkerRegistration, ev: 
+ServiceWorkerRegistrationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:8270:declare var ServiceWorkerRegistration: {
+node_modules\typescript\lib\lib.webworker.d.ts:8271:    prototype: ServiceWorkerRegistration;
+node_modules\typescript\lib\lib.webworker.d.ts:8272:    new(): ServiceWorkerRegistration;
+node_modules\typescript\lib\lib.webworker.d.ts:8275:interface SharedWorkerGlobalScopeEventMap extends 
+WorkerGlobalScopeEventMap {
+node_modules\typescript\lib\lib.webworker.d.ts:8280: * The **`SharedWorkerGlobalScope`** object (the SharedWorker 
+global scope) is accessible through the window.self keyword.
+node_modules\typescript\lib\lib.webworker.d.ts:8282: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/SharedWorkerGlobalScope)
+node_modules\typescript\lib\lib.webworker.d.ts:8284:interface SharedWorkerGlobalScope extends WorkerGlobalScope {
+node_modules\typescript\lib\lib.webworker.d.ts:8286:     * The **`name`** read-only property of the that the 
+SharedWorker.SharedWorker constructor can pass to get a reference to the SharedWorkerGlobalScope.
+node_modules\typescript\lib\lib.webworker.d.ts:8288:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/SharedWorkerGlobalScope/name)
+node_modules\typescript\lib\lib.webworker.d.ts:8291:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/SharedWorkerGlobalScope/connect_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8292:    onconnect: ((this: SharedWorkerGlobalScope, ev: MessageEvent) 
+=> any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:8294:     * The **`close()`** method of the SharedWorkerGlobalScope 
+interface discards any tasks queued in the `SharedWorkerGlobalScope`'s event loop, effectively closing this particular 
+scope.
+node_modules\typescript\lib\lib.webworker.d.ts:8296:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/SharedWorkerGlobalScope/close)
+node_modules\typescript\lib\lib.webworker.d.ts:8299:    addEventListener<K extends keyof 
+SharedWorkerGlobalScopeEventMap>(type: K, listener: (this: SharedWorkerGlobalScope, ev: 
+SharedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:8301:    removeEventListener<K extends keyof 
+SharedWorkerGlobalScopeEventMap>(type: K, listener: (this: SharedWorkerGlobalScope, ev: 
+SharedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:8305:declare var SharedWorkerGlobalScope: {
+node_modules\typescript\lib\lib.webworker.d.ts:8306:    prototype: SharedWorkerGlobalScope;
+node_modules\typescript\lib\lib.webworker.d.ts:8307:    new(): SharedWorkerGlobalScope;
+node_modules\typescript\lib\lib.webworker.d.ts:11936: * The `WindowClient` interface of the ServiceWorker API 
+represents the scope of a service worker client that is a document in a browsing context, controlled by an active 
+worker.
+node_modules\typescript\lib\lib.webworker.d.ts:11972:interface WindowOrWorkerGlobalScope {
+node_modules\typescript\lib\lib.webworker.d.ts:12016:interface WorkerEventMap extends AbstractWorkerEventMap, 
+MessageEventTargetEventMap {
+node_modules\typescript\lib\lib.webworker.d.ts:12020: * The **`Worker`** interface of the Web Workers API represents a 
+background task that can be created via script, which can send messages back to its creator.
+node_modules\typescript\lib\lib.webworker.d.ts:12022: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/Worker)
+node_modules\typescript\lib\lib.webworker.d.ts:12024:interface Worker extends EventTarget, AbstractWorker, 
+MessageEventTarget<Worker> {
+node_modules\typescript\lib\lib.webworker.d.ts:12026:     * The **`postMessage()`** method of the Worker interface 
+sends a message to the worker.
+node_modules\typescript\lib\lib.webworker.d.ts:12028:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/Worker/postMessage)
+node_modules\typescript\lib\lib.webworker.d.ts:12033:     * The **`terminate()`** method of the Worker interface 
+immediately terminates the Worker.
+node_modules\typescript\lib\lib.webworker.d.ts:12035:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/Worker/terminate)
+node_modules\typescript\lib\lib.webworker.d.ts:12038:    addEventListener<K extends keyof WorkerEventMap>(type: K, 
+listener: (this: Worker, ev: WorkerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:12040:    removeEventListener<K extends keyof WorkerEventMap>(type: K, 
+listener: (this: Worker, ev: WorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:12044:declare var Worker: {
+node_modules\typescript\lib\lib.webworker.d.ts:12045:    prototype: Worker;
+node_modules\typescript\lib\lib.webworker.d.ts:12046:    new(scriptURL: string | URL, options?: WorkerOptions): Worker;
+node_modules\typescript\lib\lib.webworker.d.ts:12049:interface WorkerGlobalScopeEventMap {
+node_modules\typescript\lib\lib.webworker.d.ts:12059: * The **`WorkerGlobalScope`** interface of the Web Workers API 
+is an interface representing the scope of any worker.
+node_modules\typescript\lib\lib.webworker.d.ts:12061: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope)
+node_modules\typescript\lib\lib.webworker.d.ts:12063:interface WorkerGlobalScope extends EventTarget, FontFaceSource, 
+WindowOrWorkerGlobalScope {
+node_modules\typescript\lib\lib.webworker.d.ts:12065:     * The **`location`** read-only property of the 
+WorkerGlobalScope interface returns the WorkerLocation associated with the worker.
+node_modules\typescript\lib\lib.webworker.d.ts:12067:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/location)
+node_modules\typescript\lib\lib.webworker.d.ts:12069:    readonly location: WorkerLocation;
+node_modules\typescript\lib\lib.webworker.d.ts:12071:     * The **`navigator`** read-only property of the 
+WorkerGlobalScope interface returns the WorkerNavigator associated with the worker.
+node_modules\typescript\lib\lib.webworker.d.ts:12073:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/navigator)
+node_modules\typescript\lib\lib.webworker.d.ts:12075:    readonly navigator: WorkerNavigator;
+node_modules\typescript\lib\lib.webworker.d.ts:12076:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/error_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12077:    onerror: ((this: WorkerGlobalScope, ev: ErrorEvent) => any) | 
+null;
+node_modules\typescript\lib\lib.webworker.d.ts:12078:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/languagechange_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12079:    onlanguagechange: ((this: WorkerGlobalScope, ev: Event) => 
+any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:12080:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/offline_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12081:    onoffline: ((this: WorkerGlobalScope, ev: Event) => any) | 
+null;
+node_modules\typescript\lib\lib.webworker.d.ts:12082:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/online_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12083:    ononline: ((this: WorkerGlobalScope, ev: Event) => any) | 
+null;
+node_modules\typescript\lib\lib.webworker.d.ts:12084:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/rejectionhandled_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12085:    onrejectionhandled: ((this: WorkerGlobalScope, ev: 
+PromiseRejectionEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:12086:    /** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/unhandledrejection_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12087:    onunhandledrejection: ((this: WorkerGlobalScope, ev: 
+PromiseRejectionEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:12089:     * The **`self`** read-only property of the WorkerGlobalScope 
+interface returns a reference to the `WorkerGlobalScope` itself.
+node_modules\typescript\lib\lib.webworker.d.ts:12091:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/self)
+node_modules\typescript\lib\lib.webworker.d.ts:12093:    readonly self: WorkerGlobalScope & typeof globalThis;
+node_modules\typescript\lib\lib.webworker.d.ts:12095:     * The **`importScripts()`** method of the WorkerGlobalScope 
+interface synchronously imports one or more scripts into the worker's scope.
+node_modules\typescript\lib\lib.webworker.d.ts:12097:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts)
+node_modules\typescript\lib\lib.webworker.d.ts:12100:    addEventListener<K extends keyof 
+WorkerGlobalScopeEventMap>(type: K, listener: (this: WorkerGlobalScope, ev: WorkerGlobalScopeEventMap[K]) => any, 
+options?: boolean | AddEventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:12102:    removeEventListener<K extends keyof 
+WorkerGlobalScopeEventMap>(type: K, listener: (this: WorkerGlobalScope, ev: WorkerGlobalScopeEventMap[K]) => any, 
+options?: boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:12106:declare var WorkerGlobalScope: {
+node_modules\typescript\lib\lib.webworker.d.ts:12107:    prototype: WorkerGlobalScope;
+node_modules\typescript\lib\lib.webworker.d.ts:12108:    new(): WorkerGlobalScope;
+node_modules\typescript\lib\lib.webworker.d.ts:12112: * The **`WorkerLocation`** interface defines the absolute 
+location of the script executed by the Worker.
+node_modules\typescript\lib\lib.webworker.d.ts:12114: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerLocation)
+node_modules\typescript\lib\lib.webworker.d.ts:12116:interface WorkerLocation {
+node_modules\typescript\lib\lib.webworker.d.ts:12118:     * The **`hash`** property of a WorkerLocation object returns 
+the URL.hash part of the worker's location.
+node_modules\typescript\lib\lib.webworker.d.ts:12120:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerLocation/hash)
+node_modules\typescript\lib\lib.webworker.d.ts:12124:     * The **`host`** property of a WorkerLocation object returns 
+the URL.host part of the worker's location.
+node_modules\typescript\lib\lib.webworker.d.ts:12126:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerLocation/host)
+node_modules\typescript\lib\lib.webworker.d.ts:12130:     * The **`hostname`** property of a WorkerLocation object 
+returns the URL.hostname part of the worker's location.
+node_modules\typescript\lib\lib.webworker.d.ts:12132:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerLocation/hostname)
+node_modules\typescript\lib\lib.webworker.d.ts:12136:     * The **`href`** property of a WorkerLocation object returns 
+a string containing the serialized URL for the worker's location.
+node_modules\typescript\lib\lib.webworker.d.ts:12138:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerLocation/href)
+node_modules\typescript\lib\lib.webworker.d.ts:12143:     * The **`origin`** property of a WorkerLocation object 
+returns the worker's URL.origin.
+node_modules\typescript\lib\lib.webworker.d.ts:12145:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerLocation/origin)
+node_modules\typescript\lib\lib.webworker.d.ts:12149:     * The **`pathname`** property of a WorkerLocation object 
+returns the URL.pathname part of the worker's location.
+node_modules\typescript\lib\lib.webworker.d.ts:12151:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerLocation/pathname)
+node_modules\typescript\lib\lib.webworker.d.ts:12155:     * The **`port`** property of a WorkerLocation object returns 
+the URL.port part of the worker's location.
+node_modules\typescript\lib\lib.webworker.d.ts:12157:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerLocation/port)
+node_modules\typescript\lib\lib.webworker.d.ts:12161:     * The **`protocol`** property of a WorkerLocation object 
+returns the URL.protocol part of the worker's location.
+node_modules\typescript\lib\lib.webworker.d.ts:12163:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerLocation/protocol)
+node_modules\typescript\lib\lib.webworker.d.ts:12167:     * The **`search`** property of a WorkerLocation object 
+returns the URL.search part of the worker's location.
+node_modules\typescript\lib\lib.webworker.d.ts:12169:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerLocation/search)
+node_modules\typescript\lib\lib.webworker.d.ts:12174:declare var WorkerLocation: {
+node_modules\typescript\lib\lib.webworker.d.ts:12175:    prototype: WorkerLocation;
+node_modules\typescript\lib\lib.webworker.d.ts:12176:    new(): WorkerLocation;
+node_modules\typescript\lib\lib.webworker.d.ts:12180: * The **`WorkerNavigator`** interface represents a subset of the 
+Navigator interface allowed to be accessed from a Worker.
+node_modules\typescript\lib\lib.webworker.d.ts:12182: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerNavigator)
+node_modules\typescript\lib\lib.webworker.d.ts:12184:interface WorkerNavigator extends NavigatorBadge, 
+NavigatorConcurrentHardware, NavigatorID, NavigatorLanguage, NavigatorLocks, NavigatorOnLine, NavigatorStorage {
+node_modules\typescript\lib\lib.webworker.d.ts:12186:     * The read-only **`mediaCapabilities`** property of the 
+WorkerNavigator interface references a MediaCapabilities object that can expose information about the decoding and 
+encoding capabilities for a given format and output capabilities (as defined by the Media Capabilities API).
+node_modules\typescript\lib\lib.webworker.d.ts:12188:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerNavigator/mediaCapabilities)
+node_modules\typescript\lib\lib.webworker.d.ts:12192:     * The **`permissions`** read-only property of the 
+WorkerNavigator interface returns a Permissions object that can be used to query and update permission status of APIs 
+covered by the Permissions API.
+node_modules\typescript\lib\lib.webworker.d.ts:12194:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerNavigator/permissions)
+node_modules\typescript\lib\lib.webworker.d.ts:12198:     * The **`serviceWorker`** read-only property of the 
+WorkerNavigator interface returns the ServiceWorkerContainer object for the associated document, which provides access 
+to registration, removal, upgrade, and communication with the ServiceWorker.
+node_modules\typescript\lib\lib.webworker.d.ts:12201:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerNavigator/serviceWorker)
+node_modules\typescript\lib\lib.webworker.d.ts:12203:    readonly serviceWorker: ServiceWorkerContainer;
+node_modules\typescript\lib\lib.webworker.d.ts:12206:declare var WorkerNavigator: {
+node_modules\typescript\lib\lib.webworker.d.ts:12207:    prototype: WorkerNavigator;
+node_modules\typescript\lib\lib.webworker.d.ts:12208:    new(): WorkerNavigator;
+node_modules\typescript\lib\lib.webworker.d.ts:12889: * The **`name`** read-only property of the the Worker.Worker 
+constructor can pass to get a reference to the DedicatedWorkerGlobalScope.
+node_modules\typescript\lib\lib.webworker.d.ts:12891: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/name)
+node_modules\typescript\lib\lib.webworker.d.ts:12894:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/rtctransform_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12895:declare var onrtctransform: ((this: DedicatedWorkerGlobalScope, 
+ev: RTCTransformEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:12897: * The **`close()`** method of the DedicatedWorkerGlobalScope 
+interface discards any tasks queued in the `DedicatedWorkerGlobalScope`'s event loop, effectively closing this 
+particular scope.
+node_modules\typescript\lib\lib.webworker.d.ts:12899: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/close)
+node_modules\typescript\lib\lib.webworker.d.ts:12903: * The **`postMessage()`** method of the 
+DedicatedWorkerGlobalScope interface sends a message to the main thread that spawned it.
+node_modules\typescript\lib\lib.webworker.d.ts:12905: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/postMessage)
+node_modules\typescript\lib\lib.webworker.d.ts:12916: * The **`location`** read-only property of the WorkerGlobalScope 
+interface returns the WorkerLocation associated with the worker.
+node_modules\typescript\lib\lib.webworker.d.ts:12918: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/location)
+node_modules\typescript\lib\lib.webworker.d.ts:12920:declare var location: WorkerLocation;
+node_modules\typescript\lib\lib.webworker.d.ts:12922: * The **`navigator`** read-only property of the 
+WorkerGlobalScope interface returns the WorkerNavigator associated with the worker.
+node_modules\typescript\lib\lib.webworker.d.ts:12924: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/navigator)
+node_modules\typescript\lib\lib.webworker.d.ts:12926:declare var navigator: WorkerNavigator;
+node_modules\typescript\lib\lib.webworker.d.ts:12927:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/error_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12928:declare var onerror: ((this: DedicatedWorkerGlobalScope, ev: 
+ErrorEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:12929:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/languagechange_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12930:declare var onlanguagechange: ((this: DedicatedWorkerGlobalScope, 
+ev: Event) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:12931:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/offline_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12932:declare var onoffline: ((this: DedicatedWorkerGlobalScope, ev: 
+Event) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:12933:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/online_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12934:declare var ononline: ((this: DedicatedWorkerGlobalScope, ev: 
+Event) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:12935:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/rejectionhandled_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12936:declare var onrejectionhandled: ((this: 
+DedicatedWorkerGlobalScope, ev: PromiseRejectionEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:12937:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/unhandledrejection_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:12938:declare var onunhandledrejection: ((this: 
+DedicatedWorkerGlobalScope, ev: PromiseRejectionEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:12940: * The **`self`** read-only property of the WorkerGlobalScope 
+interface returns a reference to the `WorkerGlobalScope` itself.
+node_modules\typescript\lib\lib.webworker.d.ts:12942: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/self)
+node_modules\typescript\lib\lib.webworker.d.ts:12944:declare var self: WorkerGlobalScope & typeof globalThis;
+node_modules\typescript\lib\lib.webworker.d.ts:12946: * The **`importScripts()`** method of the WorkerGlobalScope 
+interface synchronously imports one or more scripts into the worker's scope.
+node_modules\typescript\lib\lib.webworker.d.ts:12948: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts)
+node_modules\typescript\lib\lib.webworker.d.ts:13000:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/cancelAnimationFrame) */
+node_modules\typescript\lib\lib.webworker.d.ts:13002:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/requestAnimationFrame) */
+node_modules\typescript\lib\lib.webworker.d.ts:13004:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/message_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:13005:declare var onmessage: ((this: DedicatedWorkerGlobalScope, ev: 
+MessageEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:13006:/** [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:13007:declare var onmessageerror: ((this: DedicatedWorkerGlobalScope, 
+ev: MessageEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:13008:declare function addEventListener<K extends keyof 
+DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: 
+DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:13010:declare function removeEventListener<K extends keyof 
+DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: 
+DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+node_modules\typescript\lib\lib.webworker.d.ts:13049:type MessageEventSource = MessagePort | ServiceWorker;
+node_modules\typescript\lib\lib.webworker.d.ts:13082:type ClientTypes = "all" | "sharedworker" | "window" | "worker";
+node_modules\typescript\lib\lib.webworker.d.ts:13130:type RequestDestination = "" | "audio" | "audioworklet" | 
+"document" | "embed" | "font" | "frame" | "iframe" | "image" | "manifest" | "object" | "paintworklet" | "report" | 
+"script" | "sharedworker" | "style" | "track" | "video" | "worker" | "xslt";
+node_modules\typescript\lib\lib.webworker.d.ts:13137:type ServiceWorkerState = "activated" | "activating" | 
+"installed" | "installing" | "parsed" | "redundant";
+node_modules\typescript\lib\lib.webworker.d.ts:13138:type ServiceWorkerUpdateViaCache = "all" | "imports" | "none";
+node_modules\typescript\lib\lib.webworker.d.ts:13148:type WorkerType = "classic" | "module";
+node_modules\typescript\lib\lib.webworker.importscripts.d.ts:20:/// WorkerGlobalScope APIs
+node_modules\typescript\lib\lib.webworker.importscripts.d.ts:22:// These are only available in a Web Worker
+node_modules\typescript\lib\lib.webworker.iterable.d.ts:20:/// Worker Iterable APIs
+node_modules\typescript\lib\lib.webworker.iterable.d.ts:65:     * The **`subscribe()`** method of the 
+CookieStoreManager interface subscribes a ServiceWorkerRegistration to cookie change events.
+node_modules\typescript\lib\lib.webworker.iterable.d.ts:71:     * The **`unsubscribe()`** method of the 
+CookieStoreManager interface stops the ServiceWorkerRegistration from receiving previously subscribed events.
+node_modules\typescript\lib\typescript.d.ts:2604:                protected abstract installWorker(requestId: number, 
+packageNames: string[], cwd: string, onRequestCompleted: RequestCompletedAction): void;
+node_modules\typescript\lib\typescript.d.ts:2959:            private updateGraphWorker;
+node_modules\typescript\lib\typescript.d.ts:2969:            private filesToStringWorker;
+node_modules\typescript\lib\typescript.d.ts:3356:            private getOrCreateScriptInfoWorker;
+node_modules\typescript\lib\typescript.d.ts:3407:            private applySafeListWorker;
+node_modules\typescript\lib\typescript.d.ts:3412:            private enableRequestedPluginsWorker;
+node_modules\typescript\lib\typescript.d.ts:3487:            private logErrorWorker;
+node_modules\typescript\lib\typescript.d.ts:3507:            private getDiagnosticsWorker;
+node_modules\typescript\lib\typescript.d.ts:3534:            private getProjectInfoWorker;
+node_modules\typescript\lib\typescript.d.ts:3549:            private getFileAndProjectWorker;
+node_modules\typescript\lib\typescript.d.ts:3558:            private getQuickInfoWorker;
+node_modules\undici-types\fetch.d.ts:114:  | 'sharedworker'
+node_modules\undici-types\fetch.d.ts:118:  | 'worker'
+node_modules\undici-types\websocket.d.ts:4:import type { MessagePort } from 'worker_threads'
+node_modules\vite\dist\node\index.d.ts:1883:  * Vite-specific option to specify the max number of workers to spawn
+node_modules\vite\dist\node\index.d.ts:1888:  maxWorkers?: number;
+node_modules\vite\dist\node\index.d.ts:2084:  * In addition, you can also pass a `maxWorkers: number` option to 
+specify the
+node_modules\vite\dist\node\index.d.ts:2085:  * max number of workers to spawn. Defaults to the number of CPUs minus 1.
+node_modules\vite\dist\node\index.d.ts:2906:    * Whether this environment is SSR environment and `ssr.target` is set 
+to `'webworker'`.
+node_modules\vite\dist\node\index.d.ts:2909:    isSsrTargetWebworker?: boolean;
+node_modules\vite\dist\node\index.d.ts:3039:  * If this option is set, preprocessors will run in workers when possible.
+node_modules\vite\dist\node\index.d.ts:3044:  preprocessorMaxWorkers?: number | true;
+node_modules\vite\dist\node\index.d.ts:3132:type SSRTarget = "node" | "webworker";
+node_modules\vite\dist\node\index.d.ts:3139:  * is ignored for node but used if webworker is the target
+node_modules\vite\dist\node\index.d.ts:3461:  * Worker bundle options
+node_modules\vite\dist\node\index.d.ts:3463:  worker?: {
+node_modules\vite\dist\node\index.d.ts:3465:    * Output format for worker bundle
+node_modules\vite\dist\node\index.d.ts:3470:    * Vite plugins that apply to worker bundle. The plugins returned by 
+this function
+node_modules\vite\dist\node\index.d.ts:3472:    * rolldown worker bundling process.
+node_modules\vite\dist\node\index.d.ts:3481:    * Rolldown options to build worker bundle
+node_modules\vite\dist\node\index.d.ts:3593:interface ResolvedWorkerOptions {
+node_modules\vite\dist\node\index.d.ts:3610:interface ResolvedConfig extends Readonly<Omit<UserConfig, "plugins" | 
+"css" | "json" | "assetsInclude" | "optimizeDeps" | "worker" | "build" | "dev" | "environments" | "experimental" | 
+"future" | "server" | "preview" | "devtools"> & {
+node_modules\vite\dist\node\index.d.ts:3620:  isWorker: boolean;
+node_modules\vite\dist\node\index.d.ts:3654:  worker: ResolvedWorkerOptions;
+node_modules\vite\dist\node\index.d.ts:3886:export { type Alias, type AliasOptions, type AnymatchFn, type 
+AnymatchPattern, type AppType, type BindCLIShortcutsOptions, type BuildAppHook, BuildEnvironment, type 
+BuildEnvironmentOptions, type BuildOptions, type BuilderOptions, type CLIShortcut, type CSSModulesOptions, type 
+CSSOptions, type ChunkMetadata, type CommonServerOptions, type ConfigEnv, type ConfigPluginContext, type Connect, type 
+ConnectedPayload, type CorsOptions, type CorsOrigin, type CustomEventMap, type CustomPayload, type 
+CustomPluginOptionsVite, type DepOptimizationConfig, type DepOptimizationMetadata, type DepOptimizationOptions, 
+DevEnvironment, type DevEnvironmentContext, type DevEnvironmentOptions, type ESBuildOptions, type ESTree, type 
+Environment, type EnvironmentModuleGraph, type EnvironmentModuleNode, type EnvironmentOptions, type ErrorPayload, type 
+EsbuildTransformOptions, type ExperimentalOptions, type ExportsData, type FSWatcher, type FetchFunction, type 
+FetchModuleOptions, type FetchResult, type FetchableDevEnvironment, type FetchableDevEnvironmentContext, type 
+FileSystemServeOptions, type FilterPattern, type FullReloadPayload, type GeneralImportGlobOptions, type HMRPayload, 
+type HTMLOptions, type HmrContext, type HmrOptions, type HookHandler, type HotChannel, type HotChannelClient, type 
+HotChannelListener, type HotPayload, type HotUpdateOptions, type HtmlTagDescriptor, type index_d_exports as HttpProxy, 
+type HttpServer, type ImportGlobFunction, type ImportGlobOptions, type IndexHtmlTransform, type 
+IndexHtmlTransformContext, type IndexHtmlTransformHook, type IndexHtmlTransformResult, type InferCustomEventPayload, 
+type InlineConfig, type InternalResolveOptions, type InvalidatePayload, type JsonOptions, type KnownAsTypeMap, type 
+LegacyOptions, type LessPreprocessorOptions, type LibraryFormats, type LibraryOptions, type LightningCSSOptions, type 
+LogErrorOptions, type LogLevel, type LogOptions, type LogType, type Logger, type LoggerOptions, type Manifest, type 
+ManifestChunk, type MapToFunction, type AnymatchMatcher as Matcher, type MinifyOptions, type MinifyResult, type 
+MinimalPluginContextWithoutEnvironment, type ModuleGraph, type ModuleNode, type ModulePreloadOptions, type 
+ModuleRunnerTransformOptions, type NormalizedHotChannel, type NormalizedHotChannelClient, type 
+NormalizedServerHotChannel, type OptimizedDepInfo, type OxcOptions, type ParseResult, type ParserOptions, type Plugin, 
+type PluginContainer, type PluginHookUtils, type PluginOption, type PreprocessCSSResult, type PreviewOptions, type 
+PreviewServer, type PreviewServerHook, type ProxyOptions, type PrunePayload, type RenderBuiltAssetUrl, type ResolveFn, 
+type ResolveModulePreloadDependenciesFn, type ResolveOptions, type ResolvedBuildEnvironmentOptions, type 
+ResolvedBuildOptions, type ResolvedCSSOptions, type ResolvedConfig, type ResolvedDevEnvironmentOptions, type 
+ResolvedModulePreloadOptions, type ResolvedPreviewOptions, type ResolvedSSROptions, type ResolvedServerOptions, type 
+ResolvedServerUrls, type ResolvedUrl, type ResolvedWorkerOptions, type ResolverFunction, type ResolverObject, type 
+Rolldown, type Rollup, type RollupCommonJSOptions, type RollupDynamicImportVarsOptions, type RunnableDevEnvironment, 
+type RunnableDevEnvironmentContext, type SSROptions, type SSRTarget, type SassPreprocessorOptions, type SendOptions, 
+type ServerHook, type ServerHotChannel, type ServerModuleRunnerOptions, type ServerOptions$1 as ServerOptions, type 
+SkipInformation, type SsrDepOptimizationConfig, type StylusPreprocessorOptions, type Terser, type TerserOptions, type 
+TransformOptions, type TransformResult, type Update, type UpdatePayload, type UserConfig, type UserConfigExport, type 
+UserConfigFn, type UserConfigFnObject, type UserConfigFnPromise, Visitor, type VisitorObject, type ViteBuilder, type 
+ViteDevServer, type WatchOptions, type WebSocket, type WebSocketAlias, type WebSocketClient, type 
+WebSocketCustomListener, type WebSocketServer, build, buildErrorMessage, createBuilder, createFetchableDevEnvironment, 
+createFilter, createIdResolver, createLogger, createRunnableDevEnvironment, createServer, createServerHotChannel, 
+createServerModuleRunner, createServerModuleRunnerTransport, defaultAllowedOrigins, DEFAULT_CLIENT_CONDITIONS as 
+defaultClientConditions, DEFAULT_CLIENT_MAIN_FIELDS as defaultClientMainFields, DEFAULT_EXTERNAL_CONDITIONS as 
+defaultExternalConditions, DEFAULT_SERVER_CONDITIONS as defaultServerConditions, DEFAULT_SERVER_MAIN_FIELDS as 
+defaultServerMainFields, defineConfig, esbuildVersion, esmExternalRequirePlugin, fetchModule, formatPostcssSourceMap, 
+isCSSRequest, isFetchableDevEnvironment, isFileLoadingAllowed, isFileServingAllowed, isRunnableDevEnvironment, 
+loadConfigFromFile, loadEnv, mergeAlias, mergeConfig, minify, minifySync, ssrTransform as moduleRunnerTransform, 
+normalizePath, optimizeDeps, parse, parseAst, parseAstAsync, parseSync, perEnvironmentPlugin, perEnvironmentState, 
+preprocessCSS, preview, resolveConfig, resolveEnvPrefix, rolldownVersion, rollupVersion, runnerImport, 
+searchForWorkspaceRoot, send, sortUserPlugins, transformWithEsbuild, transformWithOxc, VERSION as version, withFilter 
+};
+node_modules\vite\types\importGlob.d.ts:40: * Declare Worker in case DOM is not added to the tsconfig lib causing
+node_modules\vite\types\importGlob.d.ts:41: * Worker interface is not defined. For developers with DOM lib added,
+node_modules\vite\types\importGlob.d.ts:42: * the Worker interface will be merged correctly.
+node_modules\vite\types\importGlob.d.ts:46:  interface Worker {}
+node_modules\vite\types\importGlob.d.ts:52:  worker: Worker
+node_modules\vite\client.d.ts:207:// web worker
+node_modules\vite\client.d.ts:208:declare module '*?worker' {
+node_modules\vite\client.d.ts:209:  const workerConstructor: {
+node_modules\vite\client.d.ts:210:    new (options?: { name?: string }): Worker
+node_modules\vite\client.d.ts:212:  export default workerConstructor
+node_modules\vite\client.d.ts:215:declare module '*?worker&inline' {
+node_modules\vite\client.d.ts:216:  const workerConstructor: {
+node_modules\vite\client.d.ts:217:    new (options?: { name?: string }): Worker
+node_modules\vite\client.d.ts:219:  export default workerConstructor
+node_modules\vite\client.d.ts:222:declare module '*?worker&url' {
+node_modules\vite\client.d.ts:227:declare module '*?sharedworker' {
+node_modules\vite\client.d.ts:228:  const sharedWorkerConstructor: {
+node_modules\vite\client.d.ts:229:    new (options?: { name?: string }): SharedWorker
+node_modules\vite\client.d.ts:231:  export default sharedWorkerConstructor
+node_modules\vite\client.d.ts:234:declare module '*?sharedworker&inline' {
+node_modules\vite\client.d.ts:235:  const sharedWorkerConstructor: {
+node_modules\vite\client.d.ts:236:    new (options?: { name?: string }): SharedWorker
+node_modules\vite\client.d.ts:238:  export default sharedWorkerConstructor
+node_modules\vite\client.d.ts:241:declare module '*?sharedworker&url' {
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:1825:  * Vite-specific option to specify the max number 
+of workers to spawn
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:1830:  maxWorkers?: number;
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:2015:  * In addition, you can also pass a `maxWorkers: 
+number` option to specify the
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:2016:  * max number of workers to spawn. Defaults to the 
+number of CPUs minus 1.
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:2824:    * Whether this environment is SSR environment 
+and `ssr.target` is set to `'webworker'`.
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:2827:    isSsrTargetWebworker?: boolean;
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:2936:  * If this option is set, preprocessors will run 
+in workers when possible.
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:2941:  preprocessorMaxWorkers?: number | true;
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3029:type SSRTarget = "node" | "webworker";
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3036:  * is ignored for node but used if webworker is 
+the target
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3329:  * Worker bundle options
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3331:  worker?: {
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3333:    * Output format for worker bundle
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3338:    * Vite plugins that apply to worker bundle. The 
+plugins returned by this function
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3340:    * rollup worker bundling process.
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3344:    * Rollup options to build worker bundle
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3425:interface ResolvedWorkerOptions {
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3438:interface ResolvedConfig extends 
+Readonly<Omit<UserConfig, "plugins" | "css" | "json" | "assetsInclude" | "optimizeDeps" | "worker" | "build" | "dev" | 
+"environments" | "experimental" | "future" | "server" | "preview"> & {
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3448:  isWorker: boolean;
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3480:  worker: ResolvedWorkerOptions;
+node_modules\vite-node\node_modules\vite\dist\node\index.d.ts:3717:export { type Alias, type AliasOptions, type 
+AnymatchFn, type AnymatchPattern, type AppType, type BindCLIShortcutsOptions, type BuildAppHook, BuildEnvironment, 
+type BuildEnvironmentOptions, type BuildOptions, type BuilderOptions, type CLIShortcut, type CSSModulesOptions, type 
+CSSOptions, type ChunkMetadata, type CommonServerOptions, type ConfigEnv, type ConfigPluginContext, type Connect, type 
+ConnectedPayload, type CorsOptions, type CorsOrigin, type CustomEventMap, type CustomPayload, type 
+CustomPluginOptionsVite, type DepOptimizationConfig, type DepOptimizationMetadata, type DepOptimizationOptions, 
+DevEnvironment, type DevEnvironmentContext, type DevEnvironmentOptions, type ESBuildOptions, type 
+ESBuildTransformResult, type Environment, type EnvironmentModuleGraph, type EnvironmentModuleNode, type 
+EnvironmentOptions, type ErrorPayload, type EsbuildTransformOptions, type ExperimentalOptions, type ExportsData, type 
+FSWatcher, type FetchFunction, type FetchModuleOptions, type FetchResult, type FetchableDevEnvironment, type 
+FetchableDevEnvironmentContext, type FileSystemServeOptions, type FilterPattern, type FullReloadPayload, type 
+GeneralImportGlobOptions, type HMRPayload, type HTMLOptions, type HmrContext, type HmrOptions, type HookHandler, type 
+HotChannel, type HotChannelClient, type HotChannelListener, type HotPayload, type HotUpdateOptions, type 
+HtmlTagDescriptor, type index_d_exports as HttpProxy, type HttpServer, type ImportGlobFunction, type 
+ImportGlobOptions, type IndexHtmlTransform, type IndexHtmlTransformContext, type IndexHtmlTransformHook, type 
+IndexHtmlTransformResult, type InferCustomEventPayload, type InlineConfig, type InternalResolveOptions, type 
+InvalidatePayload, type JsonOptions, type KnownAsTypeMap, type LegacyOptions, type LessPreprocessorOptions, type 
+LibraryFormats, type LibraryOptions, type LightningCSSOptions, type LogErrorOptions, type LogLevel, type LogOptions, 
+type LogType, type Logger, type LoggerOptions, type Manifest, type ManifestChunk, type MapToFunction, type 
+AnymatchMatcher as Matcher, type MinimalPluginContextWithoutEnvironment, type ModuleGraph, type ModuleNode, type 
+ModulePreloadOptions, type ModuleRunnerTransformOptions, type NormalizedHotChannel, type NormalizedHotChannelClient, 
+type NormalizedServerHotChannel, type OptimizedDepInfo, type Plugin, type PluginContainer, type PluginHookUtils, type 
+PluginOption, type PreprocessCSSResult, type PreviewOptions, type PreviewServer, type PreviewServerHook, type 
+ProxyOptions, type PrunePayload, type RenderBuiltAssetUrl, type ResolveFn, type ResolveModulePreloadDependenciesFn, 
+type ResolveOptions, type ResolvedBuildEnvironmentOptions, type ResolvedBuildOptions, type ResolvedCSSOptions, type 
+ResolvedConfig, type ResolvedDevEnvironmentOptions, type ResolvedModulePreloadOptions, type ResolvedPreviewOptions, 
+type ResolvedSSROptions, type ResolvedServerOptions, type ResolvedServerUrls, type ResolvedUrl, type 
+ResolvedWorkerOptions, type ResolverFunction, type ResolverObject, type Rollup, type RollupCommonJSOptions, type 
+RollupDynamicImportVarsOptions, type RunnableDevEnvironment, type RunnableDevEnvironmentContext, type SSROptions, type 
+SSRTarget, type SassPreprocessorOptions, type SendOptions, type ServerHook, type ServerHotChannel, type 
+ServerModuleRunnerOptions, type ServerOptions$1 as ServerOptions, type SkipInformation, type SsrDepOptimizationConfig, 
+type StylusPreprocessorOptions, type Terser, type TerserOptions, type TransformOptions, type TransformResult, type 
+Update, type UpdatePayload, type UserConfig, type UserConfigExport, type UserConfigFn, type UserConfigFnObject, type 
+UserConfigFnPromise, type ViteBuilder, type ViteDevServer, type WatchOptions, type WebSocket, type WebSocketAlias, 
+type WebSocketClient, type WebSocketCustomListener, type WebSocketServer, build, buildErrorMessage, createBuilder, 
+createFetchableDevEnvironment, createFilter, createIdResolver, createLogger, createRunnableDevEnvironment, 
+createServer, createServerHotChannel, createServerModuleRunner, createServerModuleRunnerTransport, 
+defaultAllowedOrigins, DEFAULT_CLIENT_CONDITIONS as defaultClientConditions, DEFAULT_CLIENT_MAIN_FIELDS as 
+defaultClientMainFields, DEFAULT_EXTERNAL_CONDITIONS as defaultExternalConditions, DEFAULT_SERVER_CONDITIONS as 
+defaultServerConditions, DEFAULT_SERVER_MAIN_FIELDS as defaultServerMainFields, defineConfig, esbuildVersion, 
+fetchModule, formatPostcssSourceMap, isCSSRequest, isFetchableDevEnvironment, isFileLoadingAllowed, 
+isFileServingAllowed, isRunnableDevEnvironment, loadConfigFromFile, loadEnv, mergeAlias, mergeConfig, ssrTransform as 
+moduleRunnerTransform, normalizePath, optimizeDeps, parseAst, parseAstAsync, perEnvironmentPlugin, 
+perEnvironmentState, preprocessCSS, preview, resolveConfig, resolveEnvPrefix, rollupVersion, runnerImport, 
+searchForWorkspaceRoot, send, sortUserPlugins, transformWithEsbuild, VERSION as version };
+node_modules\vite-node\node_modules\vite\types\importGlob.d.ts:40: * Declare Worker in case DOM is not added to the 
+tsconfig lib causing
+node_modules\vite-node\node_modules\vite\types\importGlob.d.ts:41: * Worker interface is not defined. For developers 
+with DOM lib added,
+node_modules\vite-node\node_modules\vite\types\importGlob.d.ts:42: * the Worker interface will be merged correctly.
+node_modules\vite-node\node_modules\vite\types\importGlob.d.ts:46:  interface Worker {}
+node_modules\vite-node\node_modules\vite\types\importGlob.d.ts:52:  worker: Worker
+node_modules\vite-node\node_modules\vite\client.d.ts:204:// web worker
+node_modules\vite-node\node_modules\vite\client.d.ts:205:declare module '*?worker' {
+node_modules\vite-node\node_modules\vite\client.d.ts:206:  const workerConstructor: {
+node_modules\vite-node\node_modules\vite\client.d.ts:207:    new (options?: { name?: string }): Worker
+node_modules\vite-node\node_modules\vite\client.d.ts:209:  export default workerConstructor
+node_modules\vite-node\node_modules\vite\client.d.ts:212:declare module '*?worker&inline' {
+node_modules\vite-node\node_modules\vite\client.d.ts:213:  const workerConstructor: {
+node_modules\vite-node\node_modules\vite\client.d.ts:214:    new (options?: { name?: string }): Worker
+node_modules\vite-node\node_modules\vite\client.d.ts:216:  export default workerConstructor
+node_modules\vite-node\node_modules\vite\client.d.ts:219:declare module '*?worker&url' {
+node_modules\vite-node\node_modules\vite\client.d.ts:224:declare module '*?sharedworker' {
+node_modules\vite-node\node_modules\vite\client.d.ts:225:  const sharedWorkerConstructor: {
+node_modules\vite-node\node_modules\vite\client.d.ts:226:    new (options?: { name?: string }): SharedWorker
+node_modules\vite-node\node_modules\vite\client.d.ts:228:  export default sharedWorkerConstructor
+node_modules\vite-node\node_modules\vite\client.d.ts:231:declare module '*?sharedworker&inline' {
+node_modules\vite-node\node_modules\vite\client.d.ts:232:  const sharedWorkerConstructor: {
+node_modules\vite-node\node_modules\vite\client.d.ts:233:    new (options?: { name?: string }): SharedWorker
+node_modules\vite-node\node_modules\vite\client.d.ts:235:  export default sharedWorkerConstructor
+node_modules\vite-node\node_modules\vite\client.d.ts:238:declare module '*?sharedworker&url' {
